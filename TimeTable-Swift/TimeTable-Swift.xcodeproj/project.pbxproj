@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B0C2F61D96B11300C4244B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C2F51D96B11300C4244B /* AppDelegate.swift */; };
+		00B0C2F81D96B11300C4244B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C2F71D96B11300C4244B /* ViewController.swift */; };
+		00B0C2FB1D96B11300C4244B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B0C2F91D96B11300C4244B /* Main.storyboard */; };
+		00B0C2FE1D96B11300C4244B /* TimeTable_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C2FC1D96B11300C4244B /* TimeTable_Swift.xcdatamodeld */; };
+		00B0C3001D96B11300C4244B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B0C2FF1D96B11300C4244B /* Assets.xcassets */; };
+		00B0C3031D96B11300C4244B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B0C3011D96B11300C4244B /* LaunchScreen.storyboard */; };
+		00B0C30E1D96B11300C4244B /* TimeTable_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C30D1D96B11300C4244B /* TimeTable_SwiftTests.swift */; };
+		00B0C3191D96B11300C4244B /* TimeTable_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C3181D96B11300C4244B /* TimeTable_SwiftUITests.swift */; };
+		00B0C32C1D96C2D500C4244B /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C32B1D96C2D500C4244B /* Controller.swift */; };
+		00B0C3401D98793500C4244B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0C33F1D98793500C4244B /* HeaderView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B0C30A1D96B11300C4244B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00B0C2EA1D96B11300C4244B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B0C2F11D96B11300C4244B;
+			remoteInfo = "TimeTable-Swift";
+		};
+		00B0C3151D96B11300C4244B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00B0C2EA1D96B11300C4244B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B0C2F11D96B11300C4244B;
+			remoteInfo = "TimeTable-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B0C2F21D96B11300C4244B /* TimeTable-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimeTable-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B0C2F51D96B11300C4244B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00B0C2F71D96B11300C4244B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00B0C2FA1D96B11300C4244B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00B0C2FD1D96B11300C4244B /* TimeTable_Swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeTable_Swift.xcdatamodel; sourceTree = "<group>"; };
+		00B0C2FF1D96B11300C4244B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00B0C3021D96B11300C4244B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00B0C3041D96B11300C4244B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00B0C3091D96B11300C4244B /* TimeTable-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TimeTable-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B0C30D1D96B11300C4244B /* TimeTable_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable_SwiftTests.swift; sourceTree = "<group>"; };
+		00B0C30F1D96B11300C4244B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00B0C3141D96B11300C4244B /* TimeTable-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TimeTable-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B0C3181D96B11300C4244B /* TimeTable_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable_SwiftUITests.swift; sourceTree = "<group>"; };
+		00B0C31A1D96B11300C4244B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00B0C32B1D96C2D500C4244B /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		00B0C33F1D98793500C4244B /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00B0C2EF1D96B11300C4244B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B0C3061D96B11300C4244B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B0C3111D96B11300C4244B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B0C2E91D96B11300C4244B = {
+			isa = PBXGroup;
+			children = (
+				00B0C2F41D96B11300C4244B /* TimeTable-Swift */,
+				00B0C30C1D96B11300C4244B /* TimeTable-SwiftTests */,
+				00B0C3171D96B11300C4244B /* TimeTable-SwiftUITests */,
+				00B0C2F31D96B11300C4244B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00B0C2F31D96B11300C4244B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C2F21D96B11300C4244B /* TimeTable-Swift.app */,
+				00B0C3091D96B11300C4244B /* TimeTable-SwiftTests.xctest */,
+				00B0C3141D96B11300C4244B /* TimeTable-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00B0C2F41D96B11300C4244B /* TimeTable-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C3291D96C29700C4244B /* Config */,
+				00B0C3281D96C28A00C4244B /* Views */,
+				00B0C32A1D96C2A300C4244B /* Resources */,
+				00B0C32B1D96C2D500C4244B /* Controller.swift */,
+			);
+			path = "TimeTable-Swift";
+			sourceTree = "<group>";
+		};
+		00B0C30C1D96B11300C4244B /* TimeTable-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C30D1D96B11300C4244B /* TimeTable_SwiftTests.swift */,
+				00B0C30F1D96B11300C4244B /* Info.plist */,
+			);
+			path = "TimeTable-SwiftTests";
+			sourceTree = "<group>";
+		};
+		00B0C3171D96B11300C4244B /* TimeTable-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C3181D96B11300C4244B /* TimeTable_SwiftUITests.swift */,
+				00B0C31A1D96B11300C4244B /* Info.plist */,
+			);
+			path = "TimeTable-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		00B0C3281D96C28A00C4244B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C2F71D96B11300C4244B /* ViewController.swift */,
+				00B0C2F91D96B11300C4244B /* Main.storyboard */,
+				00B0C3011D96B11300C4244B /* LaunchScreen.storyboard */,
+				00B0C33F1D98793500C4244B /* HeaderView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		00B0C3291D96C29700C4244B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C2F51D96B11300C4244B /* AppDelegate.swift */,
+				00B0C3041D96B11300C4244B /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		00B0C32A1D96C2A300C4244B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00B0C2FF1D96B11300C4244B /* Assets.xcassets */,
+				00B0C2FC1D96B11300C4244B /* TimeTable_Swift.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00B0C2F11D96B11300C4244B /* TimeTable-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B0C31D1D96B11300C4244B /* Build configuration list for PBXNativeTarget "TimeTable-Swift" */;
+			buildPhases = (
+				00B0C2EE1D96B11300C4244B /* Sources */,
+				00B0C2EF1D96B11300C4244B /* Frameworks */,
+				00B0C2F01D96B11300C4244B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TimeTable-Swift";
+			productName = "TimeTable-Swift";
+			productReference = 00B0C2F21D96B11300C4244B /* TimeTable-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00B0C3081D96B11300C4244B /* TimeTable-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B0C3201D96B11300C4244B /* Build configuration list for PBXNativeTarget "TimeTable-SwiftTests" */;
+			buildPhases = (
+				00B0C3051D96B11300C4244B /* Sources */,
+				00B0C3061D96B11300C4244B /* Frameworks */,
+				00B0C3071D96B11300C4244B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00B0C30B1D96B11300C4244B /* PBXTargetDependency */,
+			);
+			name = "TimeTable-SwiftTests";
+			productName = "TimeTable-SwiftTests";
+			productReference = 00B0C3091D96B11300C4244B /* TimeTable-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		00B0C3131D96B11300C4244B /* TimeTable-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B0C3231D96B11300C4244B /* Build configuration list for PBXNativeTarget "TimeTable-SwiftUITests" */;
+			buildPhases = (
+				00B0C3101D96B11300C4244B /* Sources */,
+				00B0C3111D96B11300C4244B /* Frameworks */,
+				00B0C3121D96B11300C4244B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00B0C3161D96B11300C4244B /* PBXTargetDependency */,
+			);
+			name = "TimeTable-SwiftUITests";
+			productName = "TimeTable-SwiftUITests";
+			productReference = 00B0C3141D96B11300C4244B /* TimeTable-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00B0C2EA1D96B11300C4244B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Pedro Brandão";
+				TargetAttributes = {
+					00B0C2F11D96B11300C4244B = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
+					};
+					00B0C3081D96B11300C4244B = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
+						TestTargetID = 00B0C2F11D96B11300C4244B;
+					};
+					00B0C3131D96B11300C4244B = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
+						TestTargetID = 00B0C2F11D96B11300C4244B;
+					};
+				};
+			};
+			buildConfigurationList = 00B0C2ED1D96B11300C4244B /* Build configuration list for PBXProject "TimeTable-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00B0C2E91D96B11300C4244B;
+			productRefGroup = 00B0C2F31D96B11300C4244B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00B0C2F11D96B11300C4244B /* TimeTable-Swift */,
+				00B0C3081D96B11300C4244B /* TimeTable-SwiftTests */,
+				00B0C3131D96B11300C4244B /* TimeTable-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00B0C2F01D96B11300C4244B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B0C3031D96B11300C4244B /* LaunchScreen.storyboard in Resources */,
+				00B0C3001D96B11300C4244B /* Assets.xcassets in Resources */,
+				00B0C2FB1D96B11300C4244B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B0C3071D96B11300C4244B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B0C3121D96B11300C4244B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00B0C2EE1D96B11300C4244B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B0C3401D98793500C4244B /* HeaderView.swift in Sources */,
+				00B0C2F81D96B11300C4244B /* ViewController.swift in Sources */,
+				00B0C2F61D96B11300C4244B /* AppDelegate.swift in Sources */,
+				00B0C2FE1D96B11300C4244B /* TimeTable_Swift.xcdatamodeld in Sources */,
+				00B0C32C1D96C2D500C4244B /* Controller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B0C3051D96B11300C4244B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B0C30E1D96B11300C4244B /* TimeTable_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B0C3101D96B11300C4244B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B0C3191D96B11300C4244B /* TimeTable_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B0C30B1D96B11300C4244B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B0C2F11D96B11300C4244B /* TimeTable-Swift */;
+			targetProxy = 00B0C30A1D96B11300C4244B /* PBXContainerItemProxy */;
+		};
+		00B0C3161D96B11300C4244B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B0C2F11D96B11300C4244B /* TimeTable-Swift */;
+			targetProxy = 00B0C3151D96B11300C4244B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00B0C2F91D96B11300C4244B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00B0C2FA1D96B11300C4244B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		00B0C3011D96B11300C4244B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00B0C3021D96B11300C4244B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00B0C31B1D96B11300C4244B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00B0C31C1D96B11300C4244B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00B0C31E1D96B11300C4244B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TimeTable-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.TimeTable-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		00B0C31F1D96B11300C4244B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TimeTable-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.TimeTable-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		00B0C3211D96B11300C4244B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TimeTable-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.TimeTable-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeTable-Swift.app/TimeTable-Swift";
+			};
+			name = Debug;
+		};
+		00B0C3221D96B11300C4244B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TimeTable-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.TimeTable-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeTable-Swift.app/TimeTable-Swift";
+			};
+			name = Release;
+		};
+		00B0C3241D96B11300C4244B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TimeTable-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.TimeTable-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "TimeTable-Swift";
+			};
+			name = Debug;
+		};
+		00B0C3251D96B11300C4244B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TimeTable-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.TimeTable-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "TimeTable-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00B0C2ED1D96B11300C4244B /* Build configuration list for PBXProject "TimeTable-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B0C31B1D96B11300C4244B /* Debug */,
+				00B0C31C1D96B11300C4244B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B0C31D1D96B11300C4244B /* Build configuration list for PBXNativeTarget "TimeTable-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B0C31E1D96B11300C4244B /* Debug */,
+				00B0C31F1D96B11300C4244B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B0C3201D96B11300C4244B /* Build configuration list for PBXNativeTarget "TimeTable-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B0C3211D96B11300C4244B /* Debug */,
+				00B0C3221D96B11300C4244B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B0C3231D96B11300C4244B /* Build configuration list for PBXNativeTarget "TimeTable-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B0C3241D96B11300C4244B /* Debug */,
+				00B0C3251D96B11300C4244B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		00B0C2FC1D96B11300C4244B /* TimeTable_Swift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				00B0C2FD1D96B11300C4244B /* TimeTable_Swift.xcdatamodel */,
+			);
+			currentVersion = 00B0C2FD1D96B11300C4244B /* TimeTable_Swift.xcdatamodel */;
+			path = TimeTable_Swift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 00B0C2EA1D96B11300C4244B /* Project object */;
+}

@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001CDB791D90491300BCC5AE /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CDB781D90491300BCC5AE /* GameController.swift */; };
+		001CDB7B1D9053BC00BCC5AE /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CDB7A1D9053BC00BCC5AE /* SpriteComponent.swift */; };
+		0056011C1D902D660075A5FC /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056011B1D902D660075A5FC /* PlayerEntity.swift */; };
+		005AAC331DB150DE00F04F9D /* IdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AAC321DB150DE00F04F9D /* IdleState.swift */; };
+		0072612E1DB2AA04002D50F1 /* StateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0072612D1DB2AA04002D50F1 /* StateComponent.swift */; };
+		0073494E1D81D412000E804E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0073494D1D81D412000E804E /* AppDelegate.swift */; };
+		007349501D81D412000E804E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0073494F1D81D412000E804E /* GameScene.sks */; };
+		007349521D81D412000E804E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349511D81D412000E804E /* GameScene.swift */; };
+		007349541D81D412000E804E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349531D81D412000E804E /* GameViewController.swift */; };
+		007349571D81D412000E804E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007349551D81D412000E804E /* Main.storyboard */; };
+		007349591D81D412000E804E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007349581D81D412000E804E /* Assets.xcassets */; };
+		0073495C1D81D412000E804E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0073495A1D81D412000E804E /* LaunchScreen.storyboard */; };
+		007349671D81D412000E804E /* RogueLike_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349661D81D412000E804E /* RogueLike_SwiftTests.swift */; };
+		007349721D81D412000E804E /* RogueLike_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349711D81D412000E804E /* RogueLike_SwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		007349631D81D412000E804E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 007349421D81D412000E804E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 007349491D81D412000E804E;
+			remoteInfo = "RogueLike-Swift";
+		};
+		0073496E1D81D412000E804E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 007349421D81D412000E804E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 007349491D81D412000E804E;
+			remoteInfo = "RogueLike-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001CDB781D90491300BCC5AE /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		001CDB7A1D9053BC00BCC5AE /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		0056011B1D902D660075A5FC /* PlayerEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
+		005AAC321DB150DE00F04F9D /* IdleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdleState.swift; sourceTree = "<group>"; };
+		0072612D1DB2AA04002D50F1 /* StateComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateComponent.swift; sourceTree = "<group>"; };
+		0073494A1D81D412000E804E /* RogueLike-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RogueLike-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0073494D1D81D412000E804E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0073494F1D81D412000E804E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		007349511D81D412000E804E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		007349531D81D412000E804E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		007349561D81D412000E804E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		007349581D81D412000E804E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0073495B1D81D412000E804E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0073495D1D81D412000E804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		007349621D81D412000E804E /* RogueLike-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RogueLike-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		007349661D81D412000E804E /* RogueLike_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogueLike_SwiftTests.swift; sourceTree = "<group>"; };
+		007349681D81D412000E804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0073496D1D81D412000E804E /* RogueLike-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RogueLike-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		007349711D81D412000E804E /* RogueLike_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RogueLike_SwiftUITests.swift; sourceTree = "<group>"; };
+		007349731D81D412000E804E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		007349471D81D412000E804E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0073495F1D81D412000E804E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0073496A1D81D412000E804E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		001CDB761D9048E300BCC5AE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0073494F1D81D412000E804E /* GameScene.sks */,
+				007349511D81D412000E804E /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		001CDB771D9048FC00BCC5AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				001CDB781D90491300BCC5AE /* GameController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		001CDB7C1D905FDE00BCC5AE /* States */ = {
+			isa = PBXGroup;
+			children = (
+				005AAC321DB150DE00F04F9D /* IdleState.swift */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
+		0056011A1D902D430075A5FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0056011B1D902D660075A5FC /* PlayerEntity.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		0056011D1D902DA10075A5FC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				001CDB7A1D9053BC00BCC5AE /* SpriteComponent.swift */,
+				0072612D1DB2AA04002D50F1 /* StateComponent.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		005601201D902E8A0075A5FC /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		007349411D81D412000E804E = {
+			isa = PBXGroup;
+			children = (
+				0073494C1D81D412000E804E /* RogueLike-Swift */,
+				007349651D81D412000E804E /* RogueLike-SwiftTests */,
+				007349701D81D412000E804E /* RogueLike-SwiftUITests */,
+				0073494B1D81D412000E804E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0073494B1D81D412000E804E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0073494A1D81D412000E804E /* RogueLike-Swift.app */,
+				007349621D81D412000E804E /* RogueLike-SwiftTests.xctest */,
+				0073496D1D81D412000E804E /* RogueLike-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0073494C1D81D412000E804E /* RogueLike-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				001CDB7C1D905FDE00BCC5AE /* States */,
+				001CDB771D9048FC00BCC5AE /* Controllers */,
+				001CDB761D9048E300BCC5AE /* Scenes */,
+				005601201D902E8A0075A5FC /* Nodes */,
+				0056011D1D902DA10075A5FC /* Components */,
+				0056011A1D902D430075A5FC /* Entities */,
+				007349801D81F28C000E804E /* Support */,
+				0073497F1D81F259000E804E /* Views */,
+			);
+			path = "RogueLike-Swift";
+			sourceTree = "<group>";
+		};
+		007349651D81D412000E804E /* RogueLike-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				007349661D81D412000E804E /* RogueLike_SwiftTests.swift */,
+				007349681D81D412000E804E /* Info.plist */,
+			);
+			path = "RogueLike-SwiftTests";
+			sourceTree = "<group>";
+		};
+		007349701D81D412000E804E /* RogueLike-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				007349711D81D412000E804E /* RogueLike_SwiftUITests.swift */,
+				007349731D81D412000E804E /* Info.plist */,
+			);
+			path = "RogueLike-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		0073497F1D81F259000E804E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				007349531D81D412000E804E /* GameViewController.swift */,
+				007349551D81D412000E804E /* Main.storyboard */,
+				0073495A1D81D412000E804E /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		007349801D81F28C000E804E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				007349581D81D412000E804E /* Assets.xcassets */,
+				0073495D1D81D412000E804E /* Info.plist */,
+				0073494D1D81D412000E804E /* AppDelegate.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		007349491D81D412000E804E /* RogueLike-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 007349761D81D412000E804E /* Build configuration list for PBXNativeTarget "RogueLike-Swift" */;
+			buildPhases = (
+				007349461D81D412000E804E /* Sources */,
+				007349471D81D412000E804E /* Frameworks */,
+				007349481D81D412000E804E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RogueLike-Swift";
+			productName = "RogueLike-Swift";
+			productReference = 0073494A1D81D412000E804E /* RogueLike-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		007349611D81D412000E804E /* RogueLike-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 007349791D81D412000E804E /* Build configuration list for PBXNativeTarget "RogueLike-SwiftTests" */;
+			buildPhases = (
+				0073495E1D81D412000E804E /* Sources */,
+				0073495F1D81D412000E804E /* Frameworks */,
+				007349601D81D412000E804E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				007349641D81D412000E804E /* PBXTargetDependency */,
+			);
+			name = "RogueLike-SwiftTests";
+			productName = "RogueLike-SwiftTests";
+			productReference = 007349621D81D412000E804E /* RogueLike-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0073496C1D81D412000E804E /* RogueLike-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0073497C1D81D412000E804E /* Build configuration list for PBXNativeTarget "RogueLike-SwiftUITests" */;
+			buildPhases = (
+				007349691D81D412000E804E /* Sources */,
+				0073496A1D81D412000E804E /* Frameworks */,
+				0073496B1D81D412000E804E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0073496F1D81D412000E804E /* PBXTargetDependency */,
+			);
+			name = "RogueLike-SwiftUITests";
+			productName = "RogueLike-SwiftUITests";
+			productReference = 0073496D1D81D412000E804E /* RogueLike-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		007349421D81D412000E804E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Pedro Brandão";
+				TargetAttributes = {
+					007349491D81D412000E804E = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
+					};
+					007349611D81D412000E804E = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
+						TestTargetID = 007349491D81D412000E804E;
+					};
+					0073496C1D81D412000E804E = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
+						TestTargetID = 007349491D81D412000E804E;
+					};
+				};
+			};
+			buildConfigurationList = 007349451D81D412000E804E /* Build configuration list for PBXProject "RogueLike-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 007349411D81D412000E804E;
+			productRefGroup = 0073494B1D81D412000E804E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				007349491D81D412000E804E /* RogueLike-Swift */,
+				007349611D81D412000E804E /* RogueLike-SwiftTests */,
+				0073496C1D81D412000E804E /* RogueLike-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		007349481D81D412000E804E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007349501D81D412000E804E /* GameScene.sks in Resources */,
+				0073495C1D81D412000E804E /* LaunchScreen.storyboard in Resources */,
+				007349591D81D412000E804E /* Assets.xcassets in Resources */,
+				007349571D81D412000E804E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		007349601D81D412000E804E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0073496B1D81D412000E804E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		007349461D81D412000E804E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001CDB791D90491300BCC5AE /* GameController.swift in Sources */,
+				001CDB7B1D9053BC00BCC5AE /* SpriteComponent.swift in Sources */,
+				007349521D81D412000E804E /* GameScene.swift in Sources */,
+				0072612E1DB2AA04002D50F1 /* StateComponent.swift in Sources */,
+				007349541D81D412000E804E /* GameViewController.swift in Sources */,
+				005AAC331DB150DE00F04F9D /* IdleState.swift in Sources */,
+				0073494E1D81D412000E804E /* AppDelegate.swift in Sources */,
+				0056011C1D902D660075A5FC /* PlayerEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0073495E1D81D412000E804E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007349671D81D412000E804E /* RogueLike_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		007349691D81D412000E804E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007349721D81D412000E804E /* RogueLike_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		007349641D81D412000E804E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 007349491D81D412000E804E /* RogueLike-Swift */;
+			targetProxy = 007349631D81D412000E804E /* PBXContainerItemProxy */;
+		};
+		0073496F1D81D412000E804E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 007349491D81D412000E804E /* RogueLike-Swift */;
+			targetProxy = 0073496E1D81D412000E804E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		007349551D81D412000E804E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				007349561D81D412000E804E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0073495A1D81D412000E804E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0073495B1D81D412000E804E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		007349741D81D412000E804E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		007349751D81D412000E804E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		007349771D81D412000E804E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "RogueLike-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.RogueLike-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		007349781D81D412000E804E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "RogueLike-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.RogueLike-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0073497A1D81D412000E804E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "RogueLike-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.RogueLike-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RogueLike-Swift.app/RogueLike-Swift";
+			};
+			name = Debug;
+		};
+		0073497B1D81D412000E804E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "RogueLike-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.RogueLike-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RogueLike-Swift.app/RogueLike-Swift";
+			};
+			name = Release;
+		};
+		0073497D1D81D412000E804E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "RogueLike-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.RogueLike-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "RogueLike-Swift";
+			};
+			name = Debug;
+		};
+		0073497E1D81D412000E804E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RogueLike-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pcrbrandao.RogueLike-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "RogueLike-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		007349451D81D412000E804E /* Build configuration list for PBXProject "RogueLike-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				007349741D81D412000E804E /* Debug */,
+				007349751D81D412000E804E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		007349761D81D412000E804E /* Build configuration list for PBXNativeTarget "RogueLike-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				007349771D81D412000E804E /* Debug */,
+				007349781D81D412000E804E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		007349791D81D412000E804E /* Build configuration list for PBXNativeTarget "RogueLike-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0073497A1D81D412000E804E /* Debug */,
+				0073497B1D81D412000E804E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0073497C1D81D412000E804E /* Build configuration list for PBXNativeTarget "RogueLike-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0073497D1D81D412000E804E /* Debug */,
+				0073497E1D81D412000E804E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 007349421D81D412000E804E /* Project object */;
+}
