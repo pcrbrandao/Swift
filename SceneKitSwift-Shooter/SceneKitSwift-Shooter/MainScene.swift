@@ -13,7 +13,4 @@ import GameplayKit
 class MainScene: SCNScene {
     
     static let fileName = "art.scnassets/MainScene.scn"
-    
-    // cameraNode = self.rootNode.childNodeWithName("vistaSuperior", recursively: false)!
-    // playerNode = self.rootNode.childNodeWithName("player", recursively: false)!
 }

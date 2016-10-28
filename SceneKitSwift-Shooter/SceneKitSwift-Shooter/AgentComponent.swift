@@ -31,6 +31,10 @@ class AgentComponent: GKComponent, GKAgentDelegate {
         
         agent.delegate = self
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     // MARK: GKAgentDelegate
@@ -46,7 +50,7 @@ class AgentComponent: GKComponent, GKAgentDelegate {
         return (hipotenusa, vetor, angle)
     }
     
-    func agentDidUpdate(agent: GKAgent) {
+    func agentDidUpdate(_ agent: GKAgent) {
         
         let agent2D = agent as! GKAgent2D
         let distanceToTracking = triangle(between: node.position, ToPoint: tracking.position).hipotenusa
@@ -65,7 +69,7 @@ class AgentComponent: GKComponent, GKAgentDelegate {
         }
     }
     
-    func agentWillUpdate(agent: GKAgent) {
+    func agentWillUpdate(_ agent: GKAgent) {
         // nada aqui
     }
 }

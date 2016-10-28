@@ -21,4 +21,8 @@ class GeometryComponent: GKComponent {
         // node.physicsBody?.contactTestBitMask = PhysicsCategory.Enemy.rawValue
     }
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 }

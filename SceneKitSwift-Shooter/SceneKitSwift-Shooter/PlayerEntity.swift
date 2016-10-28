@@ -14,22 +14,26 @@ class PlayerEntity: GKEntity {
     
     init(scene: SCNScene, andTracking tracking: GKAgent2D) {
         
-        let node = scene.rootNode.childNodeWithName("player", recursively: false)!
-        node.physicsBody?.categoryBitMask = PhysicsCategory.Player.rawValue
-        node.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
-        node.physicsBody?.contactTestBitMask = PhysicsCategory.Enemy.rawValue
+        let node = scene.rootNode.childNode(withName: "player", recursively: false)!
+        node.physicsBody?.categoryBitMask = PhysicsCategory.player.rawValue
+        node.physicsBody?.collisionBitMask = PhysicsCategory.none.rawValue
+        node.physicsBody?.contactTestBitMask = PhysicsCategory.enemy.rawValue
         
         super.init()
         
         self.addComponent(AgentComponent(withNode: node, andTracking: tracking))
         self.addComponent(GeometryComponent(withNode: node))
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func agentComponent() -> AgentComponent {
-        return self.componentForClass(AgentComponent.self)!
+        return self.component(ofType: AgentComponent.self)!
     }
     
     func geometryComponent() -> GeometryComponent {
-        return self.componentForClass(GeometryComponent.self)!
+        return self.component(ofType: GeometryComponent.self)!
     }
 }

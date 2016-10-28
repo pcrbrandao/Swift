@@ -11,9 +11,9 @@ import SceneKit
 import GameplayKit
 
 enum PhysicsCategory: Int {
-    case None = 0,
-    Player,
-    Enemy
+    case none = 0,
+    player,
+    enemy
 }
 
 class GameController: NSObject, SCNSceneRendererDelegate {
@@ -25,17 +25,17 @@ class GameController: NSObject, SCNSceneRendererDelegate {
     let agentSystem = GKComponentSystem.init(componentClass: GKAgent2D.self)
     let trackingAgent = GKAgent2D()
     let stopGoal = GKGoal.init(toReachTargetSpeed: 0)
-    var lastUpdate: NSTimeInterval = 0
+    var lastUpdate: TimeInterval = 0
     var seekGoal: GKGoal
     
     var seeking: Bool = false {
         willSet(newValue) {
             if newValue == true {
-                self.playerEntity.agentComponent().agent.behavior?.setWeight(1, forGoal: self.seekGoal)
-                self.playerEntity.agentComponent().agent.behavior?.setWeight(0, forGoal: self.stopGoal)
+                self.playerEntity.agentComponent().agent.behavior?.setWeight(1, for: self.seekGoal)
+                self.playerEntity.agentComponent().agent.behavior?.setWeight(0, for: self.stopGoal)
             } else {
-                self.playerEntity.agentComponent().agent.behavior?.setWeight(0, forGoal: self.seekGoal)
-                self.playerEntity.agentComponent().agent.behavior?.setWeight(1, forGoal: self.stopGoal)
+                self.playerEntity.agentComponent().agent.behavior?.setWeight(0, for: self.seekGoal)
+                self.playerEntity.agentComponent().agent.behavior?.setWeight(1, for: self.stopGoal)
             }
         }
     }
@@ -51,9 +51,9 @@ class GameController: NSObject, SCNSceneRendererDelegate {
         seekGoal = GKGoal.init(toSeekAgent: trackingAgent)
     }
     
-    func handleTouches(touches: Set<UITouch>, inView view:SCNView) {
+    func handleTouches(_ touches: Set<UITouch>, inView view:SCNView) {
         let touch: UITouch = touches.first!
-        let location = touch.locationInView(view)
+        let location = touch.location(in: view)
         let hitResults = view.hitTest(location, options: nil)
         
         if hitResults.count > 0 {
@@ -65,14 +65,14 @@ class GameController: NSObject, SCNSceneRendererDelegate {
         }
     }
  
-    func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         if lastUpdate == 0 {
             lastUpdate = time
         }
         
-        let delta: NSTimeInterval = time - lastUpdate
+        let delta: TimeInterval = time - lastUpdate
         lastUpdate = time
-        agentSystem.updateWithDeltaTime(delta)
+        agentSystem.update(deltaTime: delta)
     }
  
 }
