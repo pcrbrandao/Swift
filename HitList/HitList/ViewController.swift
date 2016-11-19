@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let tableViewController = TableViewController()
     
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func addName(sender: AnyObject) {
+    @IBAction func addName(_ sender: AnyObject) {
         controller.addName(InView: self)
     }
 
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         title = "The List"
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.delegate = tableViewController
         tableView.dataSource = tableViewController
     }
@@ -33,10 +33,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         controller.loadPeople()
     }
+    
+    
     
 }
 

@@ -1,15 +1,15 @@
 //
-//  HitListTests.swift
-//  HitListTests
+//  SocketChatTests.swift
+//  SocketChatTests
 //
-//  Created by Pedro Brandão on 02/09/16.
+//  Created by Pedro Brandão on 17/11/16.
 //  Copyright © 2016 Pedro Brandão. All rights reserved.
 //
 
 import XCTest
-@testable import HitList
+@testable import SocketChat
 
-class HitListTests: XCTestCase {
+class SocketChatTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -11,7 +11,7 @@ import GameplayKit
 import UIKit
 import Foundation
 
-class GameScene: SKScene {
+class LevelScene: SKScene {
     
     override func didMove(to view: SKView) {
         

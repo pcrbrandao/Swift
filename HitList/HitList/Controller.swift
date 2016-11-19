@@ -18,25 +18,25 @@ class Controller: NSObject {
     
     func addName(InView view:ViewController) {
         
-        let alert = UIAlertController(title: "New name", message: "Add a new name", preferredStyle: .Alert)
-        let saveAction = UIAlertAction(title: "Save", style: .Default, handler: { (action:UIAlertAction) -> Void in
+        let alert = UIAlertController(title: "New name", message: "Add a new name", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) -> Void in
             let textField = alert.textFields!.first
             self.saveName(textField!.text!)
             view.tableView.reloadData()
         })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: {(action:UIAlertAction) -> Void in })
-        alert.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(action:UIAlertAction) -> Void in })
+        alert.addTextField { (textField: UITextField) -> Void in }
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         
-        view.presentViewController(alert, animated: true, completion: nil)
+        view.present(alert, animated: true, completion: nil)
     }
     
-    func saveName(name: String) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    func saveName(_ name: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName("Person", inManagedObjectContext: managedContext)
-        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)
+        let person = NSManagedObject(entity: entity!, insertInto: managedContext)
         
         person.setValue(name, forKey: "name")
         
@@ -52,17 +52,17 @@ class Controller: NSObject {
         if people.count == 0 {
             //1
             let appDelegate =
-                UIApplication.sharedApplication().delegate as! AppDelegate
+                UIApplication.shared.delegate as! AppDelegate
             
             let managedContext = appDelegate.managedObjectContext
             
             //2
-            let fetchRequest = NSFetchRequest(entityName: "Person")
+            // let fetchRequest = NSFetchRequest(entityName: "Person")
             
             //3
             do {
                 let results =
-                    try managedContext.executeFetchRequest(fetchRequest)
+                    try managedContext.fetch(fetchRequest)
                 people = results as! [NSManagedObject]
             } catch let error as NSError {
                 print("Could not fetch \(error), \(error.userInfo)")
