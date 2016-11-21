@@ -10,6 +10,8 @@
 		0058A0811DE0F14700AF838A /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0801DE0F14700AF838A /* SpriteComponent.swift */; };
 		0058A0841DE0F4C400AF838A /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0831DE0F4C400AF838A /* Castle.swift */; };
 		0058A0861DE0F66C00AF838A /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0851DE0F66C00AF838A /* EntityManager.swift */; };
+		00E38F551DE397BE00FB6A19 /* MonsterWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E38F541DE397BE00FB6A19 /* MonsterWarsTests.swift */; };
+		00E38F5D1DE39D1B00FB6A19 /* TeamComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E38F5C1DE39D1B00FB6A19 /* TeamComponent.swift */; };
 		352F995B1BE91323001D1D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F995A1BE91323001D1D3E /* AppDelegate.swift */; };
 		352F995F1BE91323001D1D3E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F995E1BE91323001D1D3E /* GameScene.swift */; };
 		352F99611BE91323001D1D3E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F99601BE91323001D1D3E /* GameViewController.swift */; };
@@ -34,10 +36,24 @@
 		352F99B31BE97B48001D1D3E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F99B21BE97B48001D1D3E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		00E38F571DE397BE00FB6A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 352F994F1BE91323001D1D3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 352F99561BE91323001D1D3E;
+			remoteInfo = MonsterWars;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0058A0801DE0F14700AF838A /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		0058A0831DE0F4C400AF838A /* Castle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
 		0058A0851DE0F66C00AF838A /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		00E38F521DE397BE00FB6A19 /* MonsterWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonsterWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E38F541DE397BE00FB6A19 /* MonsterWarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterWarsTests.swift; sourceTree = "<group>"; };
+		00E38F561DE397BE00FB6A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E38F5C1DE39D1B00FB6A19 /* TeamComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamComponent.swift; sourceTree = "<group>"; };
 		352F99571BE91323001D1D3E /* MonsterWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		352F995A1BE91323001D1D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		352F995E1BE91323001D1D3E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -65,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00E38F4F1DE397BE00FB6A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		352F99541BE91323001D1D3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				0058A0801DE0F14700AF838A /* SpriteComponent.swift */,
+				00E38F5C1DE39D1B00FB6A19 /* TeamComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -92,10 +116,20 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		00E38F531DE397BE00FB6A19 /* MonsterWarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E38F541DE397BE00FB6A19 /* MonsterWarsTests.swift */,
+				00E38F561DE397BE00FB6A19 /* Info.plist */,
+			);
+			path = MonsterWarsTests;
+			sourceTree = "<group>";
+		};
 		352F994E1BE91323001D1D3E = {
 			isa = PBXGroup;
 			children = (
 				352F99591BE91323001D1D3E /* MonsterWars */,
+				00E38F531DE397BE00FB6A19 /* MonsterWarsTests */,
 				352F99581BE91323001D1D3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				352F99571BE91323001D1D3E /* MonsterWars.app */,
+				00E38F521DE397BE00FB6A19 /* MonsterWarsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +194,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00E38F511DE397BE00FB6A19 /* MonsterWarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E38F5B1DE397BE00FB6A19 /* Build configuration list for PBXNativeTarget "MonsterWarsTests" */;
+			buildPhases = (
+				00E38F4E1DE397BE00FB6A19 /* Sources */,
+				00E38F4F1DE397BE00FB6A19 /* Frameworks */,
+				00E38F501DE397BE00FB6A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E38F581DE397BE00FB6A19 /* PBXTargetDependency */,
+			);
+			name = MonsterWarsTests;
+			productName = MonsterWarsTests;
+			productReference = 00E38F521DE397BE00FB6A19 /* MonsterWarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		352F99561BE91323001D1D3E /* MonsterWars */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 352F996D1BE91323001D1D3E /* Build configuration list for PBXNativeTarget "MonsterWars" */;
@@ -182,10 +235,16 @@
 		352F994F1BE91323001D1D3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
+					00E38F511DE397BE00FB6A19 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = U3A2WCJ8XS;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 352F99561BE91323001D1D3E;
+					};
 					352F99561BE91323001D1D3E = {
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0800;
@@ -206,11 +265,19 @@
 			projectRoot = "";
 			targets = (
 				352F99561BE91323001D1D3E /* MonsterWars */,
+				00E38F511DE397BE00FB6A19 /* MonsterWarsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00E38F501DE397BE00FB6A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		352F99551BE91323001D1D3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,11 +303,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00E38F4E1DE397BE00FB6A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E38F551DE397BE00FB6A19 /* MonsterWarsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		352F99531BE91323001D1D3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0058A0861DE0F66C00AF838A /* EntityManager.swift in Sources */,
+				00E38F5D1DE39D1B00FB6A19 /* TeamComponent.swift in Sources */,
 				352F99AB1BE95410001D1D3E /* SoundManager.swift in Sources */,
 				352F995F1BE91323001D1D3E /* GameScene.swift in Sources */,
 				0058A0811DE0F14700AF838A /* SpriteComponent.swift in Sources */,
@@ -254,6 +330,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E38F581DE397BE00FB6A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 352F99561BE91323001D1D3E /* MonsterWars */;
+			targetProxy = 00E38F571DE397BE00FB6A19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		352F99621BE91323001D1D3E /* Main.storyboard */ = {
@@ -275,6 +359,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		00E38F591DE397BE00FB6A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = U3A2WCJ8XS;
+				INFOPLIST_FILE = MonsterWarsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.MonsterWarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonsterWars.app/MonsterWars";
+			};
+			name = Debug;
+		};
+		00E38F5A1DE397BE00FB6A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = U3A2WCJ8XS;
+				INFOPLIST_FILE = MonsterWarsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.MonsterWarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonsterWars.app/MonsterWars";
+			};
+			name = Release;
+		};
 		352F996B1BE91323001D1D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -388,6 +510,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00E38F5B1DE397BE00FB6A19 /* Build configuration list for PBXNativeTarget "MonsterWarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E38F591DE397BE00FB6A19 /* Debug */,
+				00E38F5A1DE397BE00FB6A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		352F99521BE91323001D1D3E /* Build configuration list for PBXProject "MonsterWars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

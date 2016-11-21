@@ -151,8 +151,8 @@ class GameScene: SKScene {
     * @brief Cria, posiciona e insere as entidades(players) no manager e na scene
     */
     func adicionaEntidades() {
-        let humamCastle = self.obtemCastle(comNomeDoArquivo: "castle1_atk", naPosicao: .esquerda)
-        let aiCastle = self.obtemCastle(comNomeDoArquivo: "castle2_atk", naPosicao: .direita)
+        let humamCastle = self.obtemCastle(comNomeDoArquivo: "castle1_atk", naPosicao: .esquerda, noTeam:.Team1)
+        let aiCastle = self.obtemCastle(comNomeDoArquivo: "castle2_atk", naPosicao: .direita, noTeam:.Team2)
         
         entityManager.add(entity: humamCastle)
         entityManager.add(entity: aiCastle)
@@ -162,8 +162,8 @@ class GameScene: SKScene {
      * @brief Cria um Castle e posiciona conforme a posição esquerda ou direita
      * @return Um Castle configurado
      */
-    func obtemCastle(comNomeDoArquivo fileName:String, naPosicao posicao:Posicao) -> Castle {
-        let castle = Castle(withFileName: fileName)
+    func obtemCastle(comNomeDoArquivo fileName:String, naPosicao posicao:Posicao, noTeam team:Team) -> Castle {
+        let castle = Castle(withFileName: fileName, andTeam:team)
         if let spriteComponent = castle.component(ofType: SpriteComponent.self) {
             let posicaoX = posicao == .direita ? size.width - (spriteComponent.node.size.width / 2) : spriteComponent.node.size.width/2
             let posicaoY = size.height / 2

@@ -12,11 +12,12 @@ import SpriteKit
 
 class Castle: GKEntity {
     
-    init(withFileName imageName: String) {
+    init(withFileName imageName: String, andTeam team:Team) {
         super.init()
         
         let spriteComponent = SpriteComponent(withTexture: SKTexture(imageNamed: imageName))
         addComponent(spriteComponent)
+        addComponent(TeamComponent(withTeam: team))
     }
     
     required init?(coder aDecoder: NSCoder) {
