@@ -11,6 +11,11 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    // Posicao na scene
+    enum Posicao {
+        case esquerda, direita
+    }
+    
     /**
      * acrescentei aqui
      */
@@ -43,18 +48,48 @@ class GameScene: SKScene {
     // MARK: Métodos sobrescritos
     override func didMove(to view: SKView) {
         
-        /**
-         * acrencentei daqui
-         */
-        
+        // acrescentei aqui
+        // Os players e enemies devem ser adicionados à scene utilizando esse manager
         entityManager = EntityManager(comCena: self)
-        
-        /**
-         * até aqui
-         */
         
         print("scene size: \(size)")
         
+        // Configura e adiciona sprites e entidades
+        self.configBackground()
+        self.configButtons()
+        self.configCoins()
+        self.adicionaEntidades()
+    }
+    
+    // Impplementa o código quando ocorrerem os toques
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {
+            return
+        }
+        let touchLocation = touch.location(in: self)
+        print("\(touchLocation)")
+        
+        if gameOver {
+            let newScene = GameScene(size: size)
+            newScene.scaleMode = scaleMode
+            view?.presentScene(newScene, transition: SKTransition.flipHorizontal(withDuration: 0.5))
+            return
+        }
+    }
+    
+    // Implementa o código de atualização por intervalo de tempo
+    override func update(_ currentTime: TimeInterval) {
+        // let deltaTime = currentTime - lastUpdateTimeInterval
+        lastUpdateTimeInterval = currentTime
+        
+        if gameOver {
+            return
+        }
+        
+    }
+  
+    // MARK: Métodos customizados
+    func configBackground() {
         // Start background music
         let bgMusic = SKAudioNode(fileNamed: "Latin_Industries.mp3")
         bgMusic.autoplayLooped = true
@@ -65,7 +100,9 @@ class GameScene: SKScene {
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.zPosition = -1
         addChild(background)
-        
+    }
+    
+    func configButtons() {
         // Add quirk button
         quirkButton = ButtonNode(iconName: "quirk1", text: "10", onButtonPress: quirkPressed)
         quirkButton.position = CGPoint(x: size.width * 0.25, y: margin + quirkButton.size.height / 2)
@@ -80,7 +117,9 @@ class GameScene: SKScene {
         munchButton = ButtonNode(iconName: "munch1", text: "50", onButtonPress: munchPressed)
         munchButton.position = CGPoint(x: size.width * 0.75, y: margin + munchButton.size.height / 2)
         addChild(munchButton)
-        
+    }
+    
+    func configCoins() {
         // Add coin 1 indicator
         let coin1 = SKSpriteNode(imageNamed: "coin")
         coin1.position = CGPoint(x: margin + coin1.size.width/2, y: size.height - margin - coin1.size.height/2)
@@ -106,39 +145,31 @@ class GameScene: SKScene {
         coin2Label.verticalAlignmentMode = .center
         coin2Label.text = "10"
         self.addChild(coin2Label)
-        
     }
     
-    // Impplementa o código quando ocorrerem os toques
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {
-            return
-        }
-        let touchLocation = touch.location(in: self)
-        print("\(touchLocation)")
+    /**
+    * @brief Cria, posiciona e insere as entidades(players) no manager e na scene
+    */
+    func adicionaEntidades() {
+        let humamCastle = self.obtemCastle(comNomeDoArquivo: "castle1_atk", naPosicao: .esquerda)
+        let aiCastle = self.obtemCastle(comNomeDoArquivo: "castle2_atk", naPosicao: .direita)
         
-        if gameOver {
-            let newScene = GameScene(size: size)
-            newScene.scaleMode = scaleMode
-            view?.presentScene(newScene, transition: SKTransition.flipHorizontal(withDuration: 0.5))
-            return
-        }
+        entityManager.add(entity: humamCastle)
+        entityManager.add(entity: aiCastle)
     }
     
-    // Implementa o código de atualização por intervalo de tempo
-    override func update(_ currentTime: TimeInterval) {
-        let deltaTime = currentTime - lastUpdateTimeInterval
-        lastUpdateTimeInterval = currentTime
-        
-        if gameOver {
-            return
+    /**
+     * @brief Cria um Castle e posiciona conforme a posição esquerda ou direita
+     * @return Um Castle configurado
+     */
+    func obtemCastle(comNomeDoArquivo fileName:String, naPosicao posicao:Posicao) -> Castle {
+        let castle = Castle(withFileName: fileName)
+        if let spriteComponent = castle.component(ofType: SpriteComponent.self) {
+            let posicaoX = posicao == .direita ? size.width - (spriteComponent.node.size.width / 2) : spriteComponent.node.size.width/2
+            let posicaoY = size.height / 2
+            spriteComponent.node.position = CGPoint(x: posicaoX, y: posicaoY)
         }
-        
-    }
-  
-    // MARK: Métodos customizados
-    func configBackground() {
-        
+        return castle
     }
     
     func quirkPressed() {

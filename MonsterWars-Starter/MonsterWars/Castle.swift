@@ -12,7 +12,7 @@ import SpriteKit
 
 class Castle: GKEntity {
     
-    init(with imageName: String) {
+    init(withFileName imageName: String) {
         super.init()
         
         let spriteComponent = SpriteComponent(withTexture: SKTexture(imageNamed: imageName))
