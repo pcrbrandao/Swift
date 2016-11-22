@@ -79,13 +79,23 @@ class GameScene: SKScene {
     
     // Implementa o código de atualização por intervalo de tempo
     override func update(_ currentTime: TimeInterval) {
-        // let deltaTime = currentTime - lastUpdateTimeInterval
+        let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
         
         if gameOver {
             return
         }
         
+        // acrescentei aqui
+        entityManager.update(deltaTime: deltaTime)
+        if let human = entityManager.castleForTeam(team: .Team1),
+            let humanCastle = human.component(ofType: CastleComponent.self) {
+            coin1Label.text = "\(humanCastle.coins)"
+        }
+        if let ai = entityManager.castleForTeam(team: .Team2),
+            let aiCastle = ai.component(ofType: CastleComponent.self) {
+            coin2Label.text = "\(aiCastle.coins)"
+        }
     }
   
     // MARK: Métodos customizados

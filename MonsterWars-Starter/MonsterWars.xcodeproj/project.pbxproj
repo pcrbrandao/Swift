@@ -12,6 +12,7 @@
 		0058A0861DE0F66C00AF838A /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0851DE0F66C00AF838A /* EntityManager.swift */; };
 		00E38F551DE397BE00FB6A19 /* MonsterWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E38F541DE397BE00FB6A19 /* MonsterWarsTests.swift */; };
 		00E38F5D1DE39D1B00FB6A19 /* TeamComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E38F5C1DE39D1B00FB6A19 /* TeamComponent.swift */; };
+		00E38F5F1DE3E2C500FB6A19 /* CastleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E38F5E1DE3E2C500FB6A19 /* CastleComponent.swift */; };
 		352F995B1BE91323001D1D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F995A1BE91323001D1D3E /* AppDelegate.swift */; };
 		352F995F1BE91323001D1D3E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F995E1BE91323001D1D3E /* GameScene.swift */; };
 		352F99611BE91323001D1D3E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352F99601BE91323001D1D3E /* GameViewController.swift */; };
@@ -54,6 +55,7 @@
 		00E38F541DE397BE00FB6A19 /* MonsterWarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterWarsTests.swift; sourceTree = "<group>"; };
 		00E38F561DE397BE00FB6A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E38F5C1DE39D1B00FB6A19 /* TeamComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamComponent.swift; sourceTree = "<group>"; };
+		00E38F5E1DE3E2C500FB6A19 /* CastleComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastleComponent.swift; sourceTree = "<group>"; };
 		352F99571BE91323001D1D3E /* MonsterWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		352F995A1BE91323001D1D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		352F995E1BE91323001D1D3E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				0058A0801DE0F14700AF838A /* SpriteComponent.swift */,
 				00E38F5C1DE39D1B00FB6A19 /* TeamComponent.swift */,
+				00E38F5E1DE3E2C500FB6A19 /* CastleComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				0058A0811DE0F14700AF838A /* SpriteComponent.swift in Sources */,
 				352F998C1BE919C5001D1D3E /* ButtonNode.swift in Sources */,
 				352F999A1BE928AF001D1D3E /* MyUtils.swift in Sources */,
+				00E38F5F1DE3E2C500FB6A19 /* CastleComponent.swift in Sources */,
 				352F99611BE91323001D1D3E /* GameViewController.swift in Sources */,
 				0058A0841DE0F4C400AF838A /* Castle.swift in Sources */,
 				352F99B31BE97B48001D1D3E /* Constants.swift in Sources */,
