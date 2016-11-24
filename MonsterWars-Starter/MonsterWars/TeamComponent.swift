@@ -14,7 +14,8 @@ import SpriteKit
  * @brief Os times possíveis e utilidades
  */
 enum Team: Int {
-    case Team1, Team2
+    case Team1 = 1
+    case Team2 = 2
     
     static let allValues = [Team1, Team2]
     

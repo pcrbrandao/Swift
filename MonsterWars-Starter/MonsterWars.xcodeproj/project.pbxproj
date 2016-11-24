@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001275D31DE4E4300074C265 /* Quirk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001275D21DE4E4300074C265 /* Quirk.swift */; };
 		0058A0811DE0F14700AF838A /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0801DE0F14700AF838A /* SpriteComponent.swift */; };
 		0058A0841DE0F4C400AF838A /* Castle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0831DE0F4C400AF838A /* Castle.swift */; };
 		0058A0861DE0F66C00AF838A /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0058A0851DE0F66C00AF838A /* EntityManager.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001275D21DE4E4300074C265 /* Quirk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quirk.swift; sourceTree = "<group>"; };
 		0058A0801DE0F14700AF838A /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		0058A0831DE0F4C400AF838A /* Castle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Castle.swift; sourceTree = "<group>"; };
 		0058A0851DE0F66C00AF838A /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				0058A0831DE0F4C400AF838A /* Castle.swift */,
 				0058A0851DE0F66C00AF838A /* EntityManager.swift */,
+				001275D21DE4E4300074C265 /* Quirk.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				352F998C1BE919C5001D1D3E /* ButtonNode.swift in Sources */,
 				352F999A1BE928AF001D1D3E /* MyUtils.swift in Sources */,
 				00E38F5F1DE3E2C500FB6A19 /* CastleComponent.swift in Sources */,
+				001275D31DE4E4300074C265 /* Quirk.swift in Sources */,
 				352F99611BE91323001D1D3E /* GameViewController.swift in Sources */,
 				0058A0841DE0F4C400AF838A /* Castle.swift in Sources */,
 				352F99B31BE97B48001D1D3E /* Constants.swift in Sources */,
@@ -521,6 +525,7 @@
 				00E38F5A1DE397BE00FB6A19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352F99521BE91323001D1D3E /* Build configuration list for PBXProject "MonsterWars" */ = {
 			isa = XCConfigurationList;
