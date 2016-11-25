@@ -173,7 +173,7 @@ class GameScene: SKScene {
      * @return Um Castle configurado
      */
     func obtemCastle(comNomeDoArquivo fileName:String, naPosicao posicao:Posicao, noTeam team:Team) -> Castle {
-        let castle = Castle(withFileName: fileName, andTeam:team)
+        let castle = Castle(withFileName: fileName, andTeam:team, entityManager: entityManager)
         if let spriteComponent = castle.component(ofType: SpriteComponent.self) {
             let posicaoX = posicao == .direita ? size.width - (spriteComponent.node.size.width / 2) : spriteComponent.node.size.width/2
             let posicaoY = size.height / 2

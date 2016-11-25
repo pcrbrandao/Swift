@@ -25,7 +25,8 @@ class EntityManager: NSObject {
      */
     lazy var componentSystems: [GKComponentSystem] = {
         let castleSystem = GKComponentSystem(componentClass: CastleComponent.self)
-        return [castleSystem]
+        let moveSystem = GKComponentSystem(componentClass: MoveComponent.self)
+        return [castleSystem, moveSystem]
     }()
     
     // Construtor
@@ -106,11 +107,58 @@ class EntityManager: NSObject {
         teamCastleComponent.coins -= costQuirk
         scene.run(SoundManager.sharedInstance.soundSpawn)
         
-        let monster = Quirk(team: team)
+        let monster = Quirk(team: team, entityManager: self)
         if let spriteComponent = monster.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: teamSpriteComponent.node.position.x, y: CGFloat.random(min: scene.size.height * 0.25, max: scene.size.height * 0.75))
             spriteComponent.node.zPosition = 2
         }
         add(entity: monster)
+    }
+    
+    /**
+     * @return Todas as entidades de um time
+     */
+    func entitiesForTeam(team: Team) -> [GKEntity] {
+        
+        return entities.flatMap { entity in
+            if teamComponent(ofEntity: entity)?.team == team {
+                return entity
+            }
+            return nil
+        }
+    }
+    
+    /**
+     * @discussion Retorna um array com os MoveComponents por team
+     */
+    func moveComponentsForTeam(team:Team) -> [MoveComponent] {
+        let entities = entitiesForTeam(team: team)
+        var moveComponents = [MoveComponent]()
+        for entity in entities {
+            if let moveComponent = component(ofType: MoveComponent.self, inEntity: entity) {
+                moveComponents.append(moveComponent as! MoveComponent)
+            }
+        }
+        return moveComponents
+    }
+    
+    /**
+     * @discussion Verifica se o component existe na entidade e o retorna se verdadeiro
+     */
+    func component(ofType type:GKComponent.Type, inEntity entity:GKEntity) -> GKComponent? {
+        if let component = entity.component(ofType: type.self) {
+            return component
+        } else {
+            return nil
+        }
+    }
+    
+    // teamComponent de uma entidade se existir
+    func teamComponent(ofEntity entity:GKEntity) -> TeamComponent? {
+        if let team = entity.component(ofType: TeamComponent.self) {
+            return team
+        } else {
+            return nil
+        }
     }
 }

@@ -12,13 +12,14 @@ import SpriteKit
 
 class Castle: GKEntity {
     
-    init(withFileName imageName: String, andTeam team:Team) {
+    init(withFileName imageName: String, andTeam team:Team, entityManager:EntityManager) {
         super.init()
         
         let spriteComponent = SpriteComponent(withTexture: SKTexture(imageNamed: imageName))
         addComponent(spriteComponent)
         addComponent(TeamComponent(withTeam: team))
         addComponent(CastleComponent())
+        addComponent(MoveComponent(maxSpeed: 0, maxAcceleration: 0, radius:Float(spriteComponent.node.size.width/2), entityManager: entityManager))
     }
     
     required init?(coder aDecoder: NSCoder) {
