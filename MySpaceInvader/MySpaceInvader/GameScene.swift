@@ -9,13 +9,31 @@
 import SpriteKit
 import GameplayKit
 
+/**
+ * @discussion Os nodes são configurados no editor no arquivo GameScene.sks. Os nodes já fazem parte da scene e não precisam ser adicionados (?) . Aqui apenas são instanciados para configurações adicionais e/ou manipulações
+ */
 class GameScene: SKScene {
     
+    private var stars: SKSpriteNode?
+    private var player: SKSpriteNode?
+    /** Código de Exemplo
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
+     */
     
     override func didMove(to view: SKView) {
         
+        stars = self.childNode(withName: SpriteNodes.kSTARS) as? SKSpriteNode
+        stars?.size = self.size
+        // self.background?.zPosition = 0 // esse é a camada (layer)
+        
+        player = self.childNode(withName: SpriteNodes.kPLAYER) as? SKSpriteNode
+        let playerPositionY = -((self.size.height / 2) - ((player?.size.height)! * 1.1))
+        player?.position = CGPoint(x: 0, y: playerPositionY)
+        
+        
+        
+        /** Código de exemplo
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
@@ -35,9 +53,10 @@ class GameScene: SKScene {
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
         }
+         */
     }
     
-    
+    /** Código de exemplo
     func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
             n.position = pos
@@ -86,4 +105,5 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+     */
 }

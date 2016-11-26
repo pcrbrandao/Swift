@@ -19,7 +19,9 @@
 		001C46C51DE8D1100061AE36 /* MySpaceInvaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46C41DE8D1100061AE36 /* MySpaceInvaderUITests.swift */; };
 		001C46D51DE8D3D50061AE36 /* bang.wav in Resources */ = {isa = PBXBuildFile; fileRef = 001C46D41DE8D3D50061AE36 /* bang.wav */; };
 		001C46D71DE8D3E00061AE36 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 001C46D61DE8D3E00061AE36 /* shoot.wav */; };
-		001C46D91DE8D5880061AE36 /* MainScript in Resources */ = {isa = PBXBuildFile; fileRef = 001C46D81DE8D5880061AE36 /* MainScript */; };
+		001C46DE1DE9C23C0061AE36 /* TelaInicial.sks in Resources */ = {isa = PBXBuildFile; fileRef = 001C46DD1DE9C23C0061AE36 /* TelaInicial.sks */; };
+		001C46E01DE9C6400061AE36 /* SpriteNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46DF1DE9C6400061AE36 /* SpriteNodes.swift */; };
+		001C46E31DEA25B30061AE36 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E21DEA25B30061AE36 /* SpriteComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		001C46C61DE8D1100061AE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		001C46D41DE8D3D50061AE36 /* bang.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bang.wav; sourceTree = "<group>"; };
 		001C46D61DE8D3E00061AE36 /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
-		001C46D81DE8D5880061AE36 /* MainScript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainScript; sourceTree = "<group>"; };
+		001C46DD1DE9C23C0061AE36 /* TelaInicial.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TelaInicial.sks; sourceTree = "<group>"; };
+		001C46DF1DE9C6400061AE36 /* SpriteNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteNodes.swift; sourceTree = "<group>"; };
+		001C46E21DEA25B30061AE36 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,17 +113,12 @@
 		001C469D1DE8D1100061AE36 /* MySpaceInvader */ = {
 			isa = PBXGroup;
 			children = (
+				001C46E11DEA25850061AE36 /* Components */,
 				001C46D31DE8D3BD0061AE36 /* Sounds */,
-				001C469E1DE8D1100061AE36 /* AppDelegate.swift */,
-				001C46A01DE8D1100061AE36 /* GameScene.sks */,
-				001C46A21DE8D1100061AE36 /* Actions.sks */,
-				001C46A41DE8D1100061AE36 /* GameScene.swift */,
-				001C46A61DE8D1100061AE36 /* GameViewController.swift */,
-				001C46A81DE8D1100061AE36 /* Main.storyboard */,
+				001C46DA1DE9C1930061AE36 /* Config */,
+				001C46DB1DE9C1B20061AE36 /* Scenes */,
+				001C46DC1DE9C1C60061AE36 /* ViewControllers */,
 				001C46AB1DE8D1100061AE36 /* Assets.xcassets */,
-				001C46AD1DE8D1100061AE36 /* LaunchScreen.storyboard */,
-				001C46B01DE8D1100061AE36 /* Info.plist */,
-				001C46D81DE8D5880061AE36 /* MainScript */,
 			);
 			path = MySpaceInvader;
 			sourceTree = "<group>";
@@ -149,6 +148,45 @@
 				001C46D41DE8D3D50061AE36 /* bang.wav */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		001C46DA1DE9C1930061AE36 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				001C469E1DE8D1100061AE36 /* AppDelegate.swift */,
+				001C46B01DE8D1100061AE36 /* Info.plist */,
+				001C46DF1DE9C6400061AE36 /* SpriteNodes.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		001C46DB1DE9C1B20061AE36 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				001C46A21DE8D1100061AE36 /* Actions.sks */,
+				001C46A01DE8D1100061AE36 /* GameScene.sks */,
+				001C46A41DE8D1100061AE36 /* GameScene.swift */,
+				001C46DD1DE9C23C0061AE36 /* TelaInicial.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		001C46DC1DE9C1C60061AE36 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				001C46A61DE8D1100061AE36 /* GameViewController.swift */,
+				001C46A81DE8D1100061AE36 /* Main.storyboard */,
+				001C46AD1DE8D1100061AE36 /* LaunchScreen.storyboard */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		001C46E11DEA25850061AE36 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				001C46E21DEA25B30061AE36 /* SpriteComponent.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +303,8 @@
 				001C46AA1DE8D1100061AE36 /* Main.storyboard in Resources */,
 				001C46D71DE8D3E00061AE36 /* shoot.wav in Resources */,
 				001C46A11DE8D1100061AE36 /* GameScene.sks in Resources */,
-				001C46D91DE8D5880061AE36 /* MainScript in Resources */,
 				001C46AC1DE8D1100061AE36 /* Assets.xcassets in Resources */,
+				001C46DE1DE9C23C0061AE36 /* TelaInicial.sks in Resources */,
 				001C46AF1DE8D1100061AE36 /* LaunchScreen.storyboard in Resources */,
 				001C46A31DE8D1100061AE36 /* Actions.sks in Resources */,
 			);
@@ -294,7 +332,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				001C46A51DE8D1100061AE36 /* GameScene.swift in Sources */,
+				001C46E31DEA25B30061AE36 /* SpriteComponent.swift in Sources */,
 				001C46A71DE8D1100061AE36 /* GameViewController.swift in Sources */,
+				001C46E01DE9C6400061AE36 /* SpriteNodes.swift in Sources */,
 				001C469F1DE8D1100061AE36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +590,7 @@
 				001C46CB1DE8D1100061AE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		001C46CC1DE8D1100061AE36 /* Build configuration list for PBXNativeTarget "MySpaceInvaderTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +599,7 @@
 				001C46CE1DE8D1100061AE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		001C46CF1DE8D1100061AE36 /* Build configuration list for PBXNativeTarget "MySpaceInvaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +608,7 @@
 				001C46D11DE8D1100061AE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
