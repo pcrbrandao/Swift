@@ -1,14 +1,13 @@
 //
-//  SpriteComponent.swift
+//  EntityManager.swift
 //  MySpaceInvader
 //
 //  Created by Pedro Brandão on 26/11/16.
 //  Copyright © 2016 Pedro Brandão. All rights reserved.
 //
 
-import GameplayKit
-import SpriteKit
+import UIKit
 
-class SpriteComponent: GKComponent {
+class EntityManager: NSObject {
 
 }

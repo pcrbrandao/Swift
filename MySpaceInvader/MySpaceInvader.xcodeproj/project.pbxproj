@@ -22,6 +22,9 @@
 		001C46DE1DE9C23C0061AE36 /* TelaInicial.sks in Resources */ = {isa = PBXBuildFile; fileRef = 001C46DD1DE9C23C0061AE36 /* TelaInicial.sks */; };
 		001C46E01DE9C6400061AE36 /* SpriteNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46DF1DE9C6400061AE36 /* SpriteNodes.swift */; };
 		001C46E31DEA25B30061AE36 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E21DEA25B30061AE36 /* SpriteComponent.swift */; };
+		001C46E51DEA2DD30061AE36 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E41DEA2DD30061AE36 /* Player.swift */; };
+		001C46E81DEA2FA70061AE36 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E71DEA2FA70061AE36 /* Controller.swift */; };
+		001C46EA1DEA38D20061AE36 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E91DEA38D20061AE36 /* EntityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		001C46DD1DE9C23C0061AE36 /* TelaInicial.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TelaInicial.sks; sourceTree = "<group>"; };
 		001C46DF1DE9C6400061AE36 /* SpriteNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteNodes.swift; sourceTree = "<group>"; };
 		001C46E21DEA25B30061AE36 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		001C46E41DEA2DD30061AE36 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		001C46E71DEA2FA70061AE36 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		001C46E91DEA38D20061AE36 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +123,9 @@
 				001C46D31DE8D3BD0061AE36 /* Sounds */,
 				001C46DA1DE9C1930061AE36 /* Config */,
 				001C46DB1DE9C1B20061AE36 /* Scenes */,
-				001C46DC1DE9C1C60061AE36 /* ViewControllers */,
+				001C46DC1DE9C1C60061AE36 /* Controllers */,
 				001C46AB1DE8D1100061AE36 /* Assets.xcassets */,
+				001C46E61DEA2E850061AE36 /* Entities */,
 			);
 			path = MySpaceInvader;
 			sourceTree = "<group>";
@@ -171,14 +178,15 @@
 			name = Scenes;
 			sourceTree = "<group>";
 		};
-		001C46DC1DE9C1C60061AE36 /* ViewControllers */ = {
+		001C46DC1DE9C1C60061AE36 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				001C46E71DEA2FA70061AE36 /* Controller.swift */,
 				001C46A61DE8D1100061AE36 /* GameViewController.swift */,
 				001C46A81DE8D1100061AE36 /* Main.storyboard */,
 				001C46AD1DE8D1100061AE36 /* LaunchScreen.storyboard */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		001C46E11DEA25850061AE36 /* Components */ = {
@@ -187,6 +195,15 @@
 				001C46E21DEA25B30061AE36 /* SpriteComponent.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		001C46E61DEA2E850061AE36 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				001C46E41DEA2DD30061AE36 /* Player.swift */,
+				001C46E91DEA38D20061AE36 /* EntityManager.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +351,11 @@
 				001C46A51DE8D1100061AE36 /* GameScene.swift in Sources */,
 				001C46E31DEA25B30061AE36 /* SpriteComponent.swift in Sources */,
 				001C46A71DE8D1100061AE36 /* GameViewController.swift in Sources */,
+				001C46E51DEA2DD30061AE36 /* Player.swift in Sources */,
 				001C46E01DE9C6400061AE36 /* SpriteNodes.swift in Sources */,
 				001C469F1DE8D1100061AE36 /* AppDelegate.swift in Sources */,
+				001C46EA1DEA38D20061AE36 /* EntityManager.swift in Sources */,
+				001C46E81DEA2FA70061AE36 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

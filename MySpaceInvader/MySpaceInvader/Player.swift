@@ -1,5 +1,5 @@
 //
-//  SpriteComponent.swift
+//  Controller.swift
 //  MySpaceInvader
 //
 //  Created by Pedro Brandão on 26/11/16.
@@ -7,8 +7,9 @@
 //
 
 import GameplayKit
-import SpriteKit
 
-class SpriteComponent: GKComponent {
+class Player: GKEntity {
+    
+    
 
 }
