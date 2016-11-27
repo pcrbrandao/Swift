@@ -13,7 +13,8 @@ class Controller: NSObject {
     static let sharedController = Controller()
     
     private var view: SKView?
-    private var mainScene: GameScene?
+    
+    var mainScene: GameScene?
     
     func play(withView view: SKView) {
         
@@ -23,15 +24,15 @@ class Controller: NSObject {
         if let scene = GameScene(fileNamed: "GameScene") {
             // Set the scale mode to scale to fit the window
             mainScene = scene
-            mainScene.scaleMode = .aspectFill
+            mainScene?.scaleMode = .aspectFill
             
             // Present the scene
-            self.view.presentScene(mainScene)
+            self.view?.presentScene(mainScene)
         }
         
-        self.view.ignoresSiblingOrder = true
+        self.view?.ignoresSiblingOrder = true
         
-        self.view.showsFPS = true
-        self.view.showsNodeCount = true
+        self.view?.showsFPS = true
+        self.view?.showsNodeCount = true
     }
 }

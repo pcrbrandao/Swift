@@ -11,4 +11,5 @@ import Foundation
 class SpriteNodes {
     static let kSTARS = "//stars"
     static let kPLAYER = "//player"
+    static let kBULLET = "bullet"
 }

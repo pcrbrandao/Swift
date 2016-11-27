@@ -25,6 +25,8 @@
 		001C46E51DEA2DD30061AE36 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E41DEA2DD30061AE36 /* Player.swift */; };
 		001C46E81DEA2FA70061AE36 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E71DEA2FA70061AE36 /* Controller.swift */; };
 		001C46EA1DEA38D20061AE36 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C46E91DEA38D20061AE36 /* EntityManager.swift */; };
+		0049AA801DEB7795007F35B5 /* FireComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049AA7F1DEB7795007F35B5 /* FireComponent.swift */; };
+		0049AA821DEB8481007F35B5 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0049AA811DEB8481007F35B5 /* MoveComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		001C46E41DEA2DD30061AE36 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		001C46E71DEA2FA70061AE36 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		001C46E91DEA38D20061AE36 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		0049AA7F1DEB7795007F35B5 /* FireComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireComponent.swift; sourceTree = "<group>"; };
+		0049AA811DEB8481007F35B5 /* MoveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				001C46E21DEA25B30061AE36 /* SpriteComponent.swift */,
+				0049AA7F1DEB7795007F35B5 /* FireComponent.swift */,
+				0049AA811DEB8481007F35B5 /* MoveComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -354,6 +360,8 @@
 				001C46E51DEA2DD30061AE36 /* Player.swift in Sources */,
 				001C46E01DE9C6400061AE36 /* SpriteNodes.swift in Sources */,
 				001C469F1DE8D1100061AE36 /* AppDelegate.swift in Sources */,
+				0049AA821DEB8481007F35B5 /* MoveComponent.swift in Sources */,
+				0049AA801DEB7795007F35B5 /* FireComponent.swift in Sources */,
 				001C46EA1DEA38D20061AE36 /* EntityManager.swift in Sources */,
 				001C46E81DEA2FA70061AE36 /* Controller.swift in Sources */,
 			);

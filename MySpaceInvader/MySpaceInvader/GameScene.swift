@@ -15,11 +15,16 @@ import GameplayKit
 class GameScene: SKScene {
     
     private var stars: SKSpriteNode?
-    private var player: SKSpriteNode?
+    private var playerNode: SKSpriteNode?
+    
+    private let controller = Controller.sharedController
+    let bulletSound = SKAction.playSoundFileNamed("shoot.wav", waitForCompletion: false)
     /** Código de Exemplo
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
      */
+    
+    var player: Player?
     
     override func didMove(to view: SKView) {
         
@@ -27,11 +32,10 @@ class GameScene: SKScene {
         stars?.size = self.size
         // self.background?.zPosition = 0 // esse é a camada (layer)
         
-        player = self.childNode(withName: SpriteNodes.kPLAYER) as? SKSpriteNode
-        let playerPositionY = -((self.size.height / 2) - ((player?.size.height)! * 1.1))
-        player?.position = CGPoint(x: 0, y: playerPositionY)
-        
-        
+        playerNode = self.childNode(withName: SpriteNodes.kPLAYER) as? SKSpriteNode
+        let playerPositionY = -((self.size.height / 2) - ((playerNode?.size.height)! * 1.1))
+        playerNode?.position = CGPoint(x: 0, y: playerPositionY)
+        player = Player(withNode: playerNode!)
         
         /** Código de exemplo
         // Get label node from scene and store it for use later
@@ -54,6 +58,18 @@ class GameScene: SKScene {
                                               SKAction.removeFromParent()]))
         }
          */
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let fire = player?.component(ofType: FireComponent.self) {
+            fire.fireBullet(withController: controller)
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let move = player?.component(ofType: MoveComponent.self) {
+            move.move(withTouches: touches, andController: controller)
+        }
     }
     
     /** Código de exemplo
