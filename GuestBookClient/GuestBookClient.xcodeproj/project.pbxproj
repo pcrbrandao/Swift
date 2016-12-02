@@ -14,6 +14,8 @@
 		0032E6F01DF1BEBE008EA6CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0032E6EE1DF1BEBE008EA6CE /* LaunchScreen.storyboard */; };
 		0032E6FB1DF1BEBE008EA6CE /* GuestBookClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032E6FA1DF1BEBE008EA6CE /* GuestBookClientTests.swift */; };
 		0032E7061DF1BEBE008EA6CE /* GuestBookClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032E7051DF1BEBE008EA6CE /* GuestBookClientUITests.swift */; };
+		0032E7161DF1C163008EA6CE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0032E7151DF1C163008EA6CE /* Podfile */; };
+		3E94C699100DAB149A4E7256 /* Pods_GuestBookClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC7BA00395B916137ACBEAB /* Pods_GuestBookClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		0032E7011DF1BEBE008EA6CE /* GuestBookClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuestBookClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0032E7051DF1BEBE008EA6CE /* GuestBookClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestBookClientUITests.swift; sourceTree = "<group>"; };
 		0032E7071DF1BEBE008EA6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0032E7151DF1C163008EA6CE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		54B37B6D7BA1350C46581FB5 /* Pods-GuestBookClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuestBookClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuestBookClient/Pods-GuestBookClient.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5C164A56A09029EC42C382 /* Pods-GuestBookClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuestBookClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuestBookClient/Pods-GuestBookClient.release.xcconfig"; sourceTree = "<group>"; };
+		EEC7BA00395B916137ACBEAB /* Pods_GuestBookClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuestBookClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E94C699100DAB149A4E7256 /* Pods_GuestBookClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +84,13 @@
 		0032E6D91DF1BEBE008EA6CE = {
 			isa = PBXGroup;
 			children = (
+				0032E7151DF1C163008EA6CE /* Podfile */,
 				0032E6E41DF1BEBE008EA6CE /* GuestBookClient */,
 				0032E6F91DF1BEBE008EA6CE /* GuestBookClientTests */,
 				0032E7041DF1BEBE008EA6CE /* GuestBookClientUITests */,
 				0032E6E31DF1BEBE008EA6CE /* Products */,
+				C28ED91A5BF6120D160F8FAA /* Pods */,
+				E1F754675EDD4FFB83B0AB2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +135,23 @@
 			path = GuestBookClientUITests;
 			sourceTree = "<group>";
 		};
+		C28ED91A5BF6120D160F8FAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54B37B6D7BA1350C46581FB5 /* Pods-GuestBookClient.debug.xcconfig */,
+				BE5C164A56A09029EC42C382 /* Pods-GuestBookClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1F754675EDD4FFB83B0AB2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEC7BA00395B916137ACBEAB /* Pods_GuestBookClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0032E70A1DF1BEBE008EA6CE /* Build configuration list for PBXNativeTarget "GuestBookClient" */;
 			buildPhases = (
+				0D9DFEC40E9FBE46023C80B3 /* [CP] Check Pods Manifest.lock */,
 				0032E6DE1DF1BEBE008EA6CE /* Sources */,
 				0032E6DF1DF1BEBE008EA6CE /* Frameworks */,
 				0032E6E01DF1BEBE008EA6CE /* Resources */,
+				9D9C81C5DB3DD15A64AAC294 /* [CP] Embed Pods Frameworks */,
+				6518FFD7EA9B69F740239C6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +267,7 @@
 			files = (
 				0032E6F01DF1BEBE008EA6CE /* LaunchScreen.storyboard in Resources */,
 				0032E6ED1DF1BEBE008EA6CE /* Assets.xcassets in Resources */,
+				0032E7161DF1C163008EA6CE /* Podfile in Resources */,
 				0032E6EB1DF1BEBE008EA6CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +287,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D9DFEC40E9FBE46023C80B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6518FFD7EA9B69F740239C6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuestBookClient/Pods-GuestBookClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9C81C5DB3DD15A64AAC294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuestBookClient/Pods-GuestBookClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0032E6DE1DF1BEBE008EA6CE /* Sources */ = {
@@ -336,6 +415,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -386,6 +466,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -413,7 +494,9 @@
 		};
 		0032E70B1DF1BEBE008EA6CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B37B6D7BA1350C46581FB5 /* Pods-GuestBookClient.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U3A2WCJ8XS;
 				INFOPLIST_FILE = GuestBookClient/Info.plist;
@@ -426,7 +509,9 @@
 		};
 		0032E70C1DF1BEBE008EA6CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5C164A56A09029EC42C382 /* Pods-GuestBookClient.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U3A2WCJ8XS;
 				INFOPLIST_FILE = GuestBookClient/Info.plist;
@@ -514,6 +599,7 @@
 				0032E70C1DF1BEBE008EA6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0032E70D1DF1BEBE008EA6CE /* Build configuration list for PBXNativeTarget "GuestBookClientTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +608,7 @@
 				0032E70F1DF1BEBE008EA6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0032E7101DF1BEBE008EA6CE /* Build configuration list for PBXNativeTarget "GuestBookClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +617,7 @@
 				0032E7121DF1BEBE008EA6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
