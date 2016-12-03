@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     
     let mainTableViewController = MainTableViewController.sharedInstance
+    let guestBookController = GuestBookController.sharedController
     
     @IBOutlet weak var tableView: UITableView!
 

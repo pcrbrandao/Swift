@@ -11,7 +11,6 @@ import UIKit
 class MainTableViewController: UITableViewController {
     
     static let sharedInstance = MainTableViewController()
-    
     let guestBookController = GuestBookController.sharedController
 
     override func viewDidLoad() {
@@ -21,7 +20,7 @@ class MainTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,16 +37,25 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3 // por enquanto
+        if let guestBooks = guestBookController.getGuestBooks() {
+            return guestBooks.count
+        } else {
+            return 1
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
-
+        
+        cell.textLabel?.text = "Não há registros..."
+        
         // Configure the cell...
-        cell.textLabel?.text = "Célula...\(indexPath.row)"
-
+        if let guestBooks = guestBookController.getGuestBooks() {
+            if guestBooks.count > 0 {
+                cell.textLabel?.text = guestBooks[indexPath.row].toString()
+            }
+        }
         return cell
     }
 

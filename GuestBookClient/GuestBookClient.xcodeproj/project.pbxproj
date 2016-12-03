@@ -113,13 +113,10 @@
 		0032E6E41DF1BEBE008EA6CE /* GuestBookClient */ = {
 			isa = PBXGroup;
 			children = (
-				0032E6E51DF1BEBE008EA6CE /* AppDelegate.swift */,
-				0032E6E71DF1BEBE008EA6CE /* ViewController.swift */,
-				0032E6E91DF1BEBE008EA6CE /* Main.storyboard */,
+				003DE3F81DF368AB00B7B802 /* Configs */,
+				003DE3F71DF3689B00B7B802 /* ViewControllers */,
+				003DE3F61DF3688800B7B802 /* StoryBoards */,
 				0032E6EC1DF1BEBE008EA6CE /* Assets.xcassets */,
-				0032E6EE1DF1BEBE008EA6CE /* LaunchScreen.storyboard */,
-				0032E6F11DF1BEBE008EA6CE /* Info.plist */,
-				002F72FF1DF1FE2200FD527F /* MainTableViewController.swift */,
 				00AB0F651DF2080000163EF5 /* GuestBookController.swift */,
 				00AB0F671DF20AF800163EF5 /* GuestBook.swift */,
 			);
@@ -142,6 +139,33 @@
 				0032E7071DF1BEBE008EA6CE /* Info.plist */,
 			);
 			path = GuestBookClientUITests;
+			sourceTree = "<group>";
+		};
+		003DE3F61DF3688800B7B802 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0032E6E91DF1BEBE008EA6CE /* Main.storyboard */,
+				0032E6EE1DF1BEBE008EA6CE /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		003DE3F71DF3689B00B7B802 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0032E6E71DF1BEBE008EA6CE /* ViewController.swift */,
+				002F72FF1DF1FE2200FD527F /* MainTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		003DE3F81DF368AB00B7B802 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				0032E6E51DF1BEBE008EA6CE /* AppDelegate.swift */,
+				0032E6F11DF1BEBE008EA6CE /* Info.plist */,
+			);
+			name = Configs;
 			sourceTree = "<group>";
 		};
 		C28ED91A5BF6120D160F8FAA /* Pods */ = {

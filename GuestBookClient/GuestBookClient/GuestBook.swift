@@ -6,22 +6,40 @@
 //  Copyright © 2016 Pedro Brandão. All rights reserved.
 //
 
-import UIKit
+import ObjectMapper
 
-class GuestBook: NSObject {
+class GuestBook: Mappable {
     
-    var Id: Int
-    var email: String
-    var title: String
-    var content: String
+    var Id: Int?
+    var email: String?
+    var title: String?
+    var content: String?
     
-    init(withId id:Int, email:String, title:String, content:String) {
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        Id <- map["Id"]
+        email <- map["email"]
+        title <- map["title"]
+        content <- map["content"]
+    }
+    
+    init(email:String, title:String, content:String) {
         
-        self.Id = id
         self.email = email
         self.title = title
         self.content = content
-        
-        super.init()
+    }
+    
+}
+
+extension GuestBook {
+    
+    func toDic() -> [String: Any] {
+        return ["Id": Id, "email": email, "title":title, "content":content]
+    }
+    
+    func toString() -> String {
+        return "id: \(Id), email: \(email), title: \(title), content: \(content)"
     }
 }
