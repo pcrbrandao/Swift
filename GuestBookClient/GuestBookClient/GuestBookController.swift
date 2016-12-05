@@ -9,6 +9,9 @@
 import Alamofire
 import HTTPStatusCodes
 
+/**
+ * @brief <#description#>
+ */
 class GuestBookController: NSObject {
     
     private var guestBooks = [GuestBook]()
@@ -34,6 +37,32 @@ class GuestBookController: NSObject {
             return self.guestBooks
         } else {
             return nil
+        }
+    }
+    
+    // testa campos
+    func dadosValidos(strings: [String]) -> Bool {
+        
+        if strings.count <= 0 {
+            return false
+        }
+        
+        for string in strings {
+            if string.campoValido != true {
+                return false
+            }
+        }
+        return true
+    }
+}
+
+extension String {
+    var campoValido: Bool {
+        let count = self.characters.count
+        if count <= 0 || count > 40 {
+            return false
+        } else {
+            return true
         }
     }
 }

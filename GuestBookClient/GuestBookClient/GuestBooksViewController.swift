@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GuestBooksViewController: UIViewController {
     
     
     let mainTableViewController = MainTableViewController.sharedInstance
@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         tableView.delegate = mainTableViewController
         tableView.dataSource = mainTableViewController
         
+        let bb = UIBarButtonItem()
+        bb.title = ""
+        
+        self.navigationItem.backBarButtonItem = bb
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -28,9 +28,12 @@ class GuestBookClientUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testBotaoVolta() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCUIApplication().navigationBars["Guest Books"].buttons["Add"].tap()
+        XCUIApplication().navigationBars["Add Guest Book"].buttons["Guest Books"].tap()
+        
     }
     
 }

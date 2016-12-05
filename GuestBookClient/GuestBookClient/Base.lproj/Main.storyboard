@@ -26,7 +26,7 @@
         <!--Guest Books-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Guest Books" id="BYZ-38-t0r" customClass="ViewController" customModule="GuestBookClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Guest Books" id="BYZ-38-t0r" customClass="GuestBooksViewController" customModule="GuestBookClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="92" width="288" height="28"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rih-RX-WeB" id="4AV-xK-Sax">
-                                            <frame key="frameInset" width="288" height="27"/>
+                                            <frame key="frameInset" width="288" height="27.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -75,7 +75,7 @@
         <!--Add Guest Book-->
         <scene sceneID="lsD-tq-7SP">
             <objects>
-                <viewController title="Add Guest Book" id="cbr-30-vAt" sceneMemberID="viewController">
+                <viewController title="Add Guest Book" id="cbr-30-vAt" customClass="AddGuestBookViewController" customModule="GuestBookClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DlT-Rq-cEl"/>
                         <viewControllerLayoutGuide type="bottom" id="BEA-NR-e51"/>
@@ -137,6 +137,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h0-Be-Rxa">
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="addGuestBook:" destination="cbr-30-vAt" eventType="touchUpInside" id="KlZ-uc-rmz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -161,6 +164,12 @@
                             <constraint firstItem="hcm-RP-dTQ" firstAttribute="top" secondItem="w1v-Pc-tI6" secondAttribute="bottom" constant="13" id="xLj-Zk-hoj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="content" destination="uBZ-FA-Xkv" id="B4p-Oq-2eL"/>
+                        <outlet property="email" destination="7xV-O8-9jB" id="IF2-f1-bYf"/>
+                        <outlet property="guestTitle" destination="RSb-O8-kaY" id="7Jy-42-6Fh"/>
+                        <outlet property="title" destination="RSb-O8-kaY" id="aCp-pb-OPe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gf8-dP-Tdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
