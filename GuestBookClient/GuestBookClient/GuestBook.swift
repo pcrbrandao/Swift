@@ -31,6 +31,13 @@ class GuestBook: Mappable {
         self.content = content
     }
     
+    init(id:Int, email:String, title:String, content:String) {
+        self.Id = id
+        self.email = email
+        self.title = title
+        self.content = content
+    }
+    
 }
 
 extension GuestBook {
@@ -40,6 +47,23 @@ extension GuestBook {
     }
     
     func toString() -> String {
-        return "id: \(Id), email: \(email), title: \(title), content: \(content)"
+        var texto = ""
+        
+        if let id = self.Id {
+            texto += "\(id)"
+        }
+        
+        if let email = self.email {
+            texto += ", \(email)"
+        }
+        
+        if let gTitle = self.title {
+            texto += ", \(gTitle)"
+        }
+        
+        if let content = self.content {
+            texto += ", \(content)"
+        }
+        return texto
     }
 }

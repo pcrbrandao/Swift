@@ -53,7 +53,9 @@ class MainTableViewController: UITableViewController {
         // Configure the cell...
         if let guestBooks = guestBookController.getGuestBooks() {
             if guestBooks.count > 0 {
-                cell.textLabel?.text = guestBooks[indexPath.row].toString()
+                
+                let gb = guestBooks[indexPath.row] as GuestBook!
+                cell.textLabel?.text = gb?.toString()
             }
         }
         return cell

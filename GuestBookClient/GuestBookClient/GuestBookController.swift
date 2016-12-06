@@ -10,26 +10,41 @@ import Alamofire
 import HTTPStatusCodes
 
 /**
- * @brief <#description#>
+ * @brief Utiliza os webservices e retorna o resultado para os view controllers
  */
 class GuestBookController: NSObject {
     
+    // a lista de Guest Books registrados
     private var guestBooks = [GuestBook]()
     
     let serviceURL = "http://localhost:3000/guestbook"
     
     static let sharedController = GuestBookController()
     
-    func addEntry(email:String, title:String, content:String) {
-        let guestBook = GuestBook(email: email, title: title, content: content)
+    func addEntry(email:String, title:String, content:String) -> (ok:Bool, code:Int)? {
         
-        let parameters: Parameters = guestBook.toDic()
+        var ok = true
+        var code: Int = 0
         
-        Alamofire.request(serviceURL, parameters: parameters, encoding: JSONEncoding.default).response { response in
-            if response.response?.statusCode == HTTPStatusCode.ok.hashValue {
-                self.guestBooks.append(guestBook)
-            }
+        if dadosValidos(strings: [email, title, content]) {
+            
+            let id = self.guestBooks.count
+            
+            let guestBook = GuestBook(id:id, email: email, title: title, content: content)
+            let parameters: Parameters = guestBook.toDic()
+            
+            //Alamofire.request(serviceURL, parameters: parameters, encoding: JSONEncoding.default).response { response in
+            //    code = (response.response?.statusCode)!
+            //    if code == HTTPStatusCode.ok.hashValue {
+            self.guestBooks.append(guestBook)
+            //    } else {
+            //        ok = false
+            //    }
+            //}
+        } else {
+            ok = false
         }
+        return (ok, code)
     }
     
     func getGuestBooks() -> [GuestBook]? {

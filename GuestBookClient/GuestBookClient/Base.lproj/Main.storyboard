@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="92" width="288" height="28"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rih-RX-WeB" id="4AV-xK-Sax">
-                                            <frame key="frameInset" width="288" height="27.5"/>
+                                            <frame key="frameInset" width="288" height="27"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" title="Guest Books" id="qgB-tm-lqT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DFr-rg-0aU">
                             <connections>
-                                <segue destination="cbr-30-vAt" kind="show" id="PCp-hF-5Jo"/>
+                                <segue destination="cbr-30-vAt" kind="show" identifier="segueAddGuestBook" id="g5G-4A-he7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -168,7 +168,6 @@
                         <outlet property="content" destination="uBZ-FA-Xkv" id="B4p-Oq-2eL"/>
                         <outlet property="email" destination="7xV-O8-9jB" id="IF2-f1-bYf"/>
                         <outlet property="guestTitle" destination="RSb-O8-kaY" id="7Jy-42-6Fh"/>
-                        <outlet property="title" destination="RSb-O8-kaY" id="aCp-pb-OPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gf8-dP-Tdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
