@@ -22,7 +22,6 @@ class AddGuestBookViewController: UIViewController {
         
         let entry = controller.addEntry(email: email.text!, title: guestTitle.text!, content: content.text!)
         if (entry?.ok)! {
-            tableController.tableView.reloadData()
             alerta(titulo: "Registro adicionado", mensagem: "Registro adicionado com sucesso!")
         } else {
             alerta(titulo: "Erro adicionando", mensagem: "Houve uma falha tentando adicionar um registro")
@@ -33,6 +32,7 @@ class AddGuestBookViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        email.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {

@@ -31,9 +31,36 @@ class GuestBookClientUITests: XCTestCase {
     func testBotaoVolta() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCUIApplication().navigationBars["Guest Books"].buttons["Add"].tap()
-        XCUIApplication().navigationBars["Add Guest Book"].buttons["Guest Books"].tap()
         
+        let app = XCUIApplication()
+        
+        // no storyboard foram preenchidos em Accessibility, identifier
+        // com exceção do buttom
+        let emailTextField = app.textFields["emailField"]
+        let titleTextField = app.textFields["titleField"]
+        let contentTextField = app.textFields["contentField"]
+        let buttomOk = app.buttons["OK"]
+        
+        app.navigationBars["Guest Books"].buttons["Add"].tap()
+        
+        emailTextField.typeText("pcrbrandao")
+        
+        titleTextField.tap()
+        titleTextField.typeText("Titulo")
+        
+        contentTextField.tap()
+        contentTextField.typeText("Conteudo")
+        
+        buttomOk.tap()
+        
+        app.alerts["Registro adicionado"].buttons["OK"].tap()
+        
+        // obtendo o texto na célula: não descobri como melhorar ainda
+        let cell = app.tables.cells.element(boundBy: 0).staticTexts.element(boundBy: 0)
+        let obtido = cell.label
+        let esperado = "0, pcrbrandao, Titulo, Conteudo"
+        print("obtido..........: \(obtido)")
+        
+        XCTAssert(obtido == esperado)
     }
-    
 }
