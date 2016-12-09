@@ -37,7 +37,6 @@ class GuestBookController: NSObject {
             Alamofire.request(serviceURL, method:.post, parameters: parameters, encoding: JSONEncoding.default).response { response in
                 
                 let code = (response.response?.statusCode)!
-                print("codigo de resposta..... \(code), \(HTTPStatusCode.ok.rawValue)")
                 
                 if code == HTTPStatusCode.ok.rawValue {
                     self.guestBooks.append(guestBook)
