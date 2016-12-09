@@ -10,18 +10,18 @@ import ObjectMapper
 
 class GuestBook: Mappable {
     
-    var Id: Int?
-    var email: String?
-    var title: String?
-    var content: String?
+    var Id: Int = 0
+    var email: String = ""
+    var title: String = ""
+    var content: String = ""
     
     required init?(map: Map) { }
     
     func mapping(map: Map) {
-        Id <- map["Id"]
-        email <- map["email"]
-        title <- map["title"]
-        content <- map["content"]
+        self.Id <- map["Id"]
+        self.email <- map["Email"]
+        self.title <- map["Title"]
+        self.content <- map["Content"]
     }
     
     init(email:String, title:String, content:String) {
@@ -37,33 +37,16 @@ class GuestBook: Mappable {
         self.title = title
         self.content = content
     }
-    
 }
 
 extension GuestBook {
     
     func toDic() -> [String: Any] {
-        return ["Id": Id, "email": email, "title":title, "content":content]
+        return ["Id":  Id, "email": email, "title":title, "content":content]
     }
     
     func toString() -> String {
-        var texto = ""
         
-        if let id = self.Id {
-            texto += "\(id)"
-        }
-        
-        if let email = self.email {
-            texto += ", \(email)"
-        }
-        
-        if let gTitle = self.title {
-            texto += ", \(gTitle)"
-        }
-        
-        if let content = self.content {
-            texto += ", \(content)"
-        }
-        return texto
+        return "\(email), \(title), \(content)"
     }
 }

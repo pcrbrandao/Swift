@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import GuestBookClient
 
 class GuestBookClientUITests: XCTestCase {
         
@@ -21,6 +22,7 @@ class GuestBookClientUITests: XCTestCase {
         XCUIApplication().launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
     }
     
     override func tearDown() {
@@ -28,7 +30,7 @@ class GuestBookClientUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testBotaoVolta() {
+    func testAdicionaUmRegistro() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
@@ -41,15 +43,19 @@ class GuestBookClientUITests: XCTestCase {
         let contentTextField = app.textFields["contentField"]
         let buttomOk = app.buttons["OK"]
         
+        let email = "email"
+        let titulo = "titulo"
+        let conteudo = "conteudo"
+        
         app.navigationBars["Guest Books"].buttons["Add"].tap()
         
-        emailTextField.typeText("pcrbrandao")
+        emailTextField.typeText(email)
         
         titleTextField.tap()
-        titleTextField.typeText("Titulo")
+        titleTextField.typeText(titulo)
         
         contentTextField.tap()
-        contentTextField.typeText("Conteudo")
+        contentTextField.typeText(conteudo)
         
         buttomOk.tap()
         
@@ -58,7 +64,7 @@ class GuestBookClientUITests: XCTestCase {
         // obtendo o texto na célula: não descobri como melhorar ainda
         let cell = app.tables.cells.element(boundBy: 0).staticTexts.element(boundBy: 0)
         let obtido = cell.label
-        let esperado = "0, pcrbrandao, Titulo, Conteudo"
+        let esperado = "\(email), \(titulo), \(conteudo)"
         print("obtido..........: \(obtido)")
         
         XCTAssert(obtido == esperado)

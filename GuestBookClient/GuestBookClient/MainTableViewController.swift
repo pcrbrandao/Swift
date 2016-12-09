@@ -15,7 +15,7 @@ class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
 
@@ -37,8 +37,8 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let guestBooks = guestBookController.getGuestBooks() {
-            return guestBooks.count
+        if guestBookController.guestBooks.count > 0 {
+            return guestBookController.guestBooks.count
         } else {
             return 1
         }
@@ -51,11 +51,10 @@ class MainTableViewController: UITableViewController {
         cell.textLabel?.text = "Não há registros..."
         
         // Configure the cell...
-        if let guestBooks = guestBookController.getGuestBooks() {
-            if guestBooks.count > 0 {
-                
-                let gb = guestBooks[indexPath.row] as GuestBook!
-                cell.textLabel?.text = gb?.toString()
+        if guestBookController.guestBooks.count > 0 {
+            let gb = guestBookController.guestBooks[indexPath.row] as GuestBook!
+            if let texto = gb?.toString() {
+                cell.textLabel?.text = texto
             }
         }
         return cell

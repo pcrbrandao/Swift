@@ -16,6 +16,7 @@
 		0032E6FB1DF1BEBE008EA6CE /* GuestBookClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032E6FA1DF1BEBE008EA6CE /* GuestBookClientTests.swift */; };
 		0032E7061DF1BEBE008EA6CE /* GuestBookClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032E7051DF1BEBE008EA6CE /* GuestBookClientUITests.swift */; };
 		0032E7161DF1C163008EA6CE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0032E7151DF1C163008EA6CE /* Podfile */; };
+		005FA1E31DF98FC400380BC5 /* GuestBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005FA1E21DF98FC400380BC5 /* GuestBookTests.swift */; };
 		006E87DC1DF441BA00FD3343 /* AddGuestBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006E87DB1DF441BA00FD3343 /* AddGuestBookViewController.swift */; };
 		006E87E01DF46EE200FD3343 /* GuestBookControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006E87DF1DF46EE200FD3343 /* GuestBookControllerTests.swift */; };
 		00AB0F661DF2080000163EF5 /* GuestBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AB0F651DF2080000163EF5 /* GuestBookController.swift */; };
@@ -56,6 +57,7 @@
 		0032E7051DF1BEBE008EA6CE /* GuestBookClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestBookClientUITests.swift; sourceTree = "<group>"; };
 		0032E7071DF1BEBE008EA6CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0032E7151DF1C163008EA6CE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		005FA1E21DF98FC400380BC5 /* GuestBookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestBookTests.swift; sourceTree = "<group>"; };
 		006E87DB1DF441BA00FD3343 /* AddGuestBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGuestBookViewController.swift; sourceTree = "<group>"; };
 		006E87DF1DF46EE200FD3343 /* GuestBookControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestBookControllerTests.swift; sourceTree = "<group>"; };
 		00AB0F651DF2080000163EF5 /* GuestBookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestBookController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				0032E6FA1DF1BEBE008EA6CE /* GuestBookClientTests.swift */,
 				0032E6FC1DF1BEBE008EA6CE /* Info.plist */,
 				006E87DF1DF46EE200FD3343 /* GuestBookControllerTests.swift */,
+				005FA1E21DF98FC400380BC5 /* GuestBookTests.swift */,
 			);
 			path = GuestBookClientTests;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005FA1E31DF98FC400380BC5 /* GuestBookTests.swift in Sources */,
 				0032E6FB1DF1BEBE008EA6CE /* GuestBookClientTests.swift in Sources */,
 				006E87E01DF46EE200FD3343 /* GuestBookControllerTests.swift in Sources */,
 			);
