@@ -43,7 +43,11 @@ class GuestBookClientUITests: XCTestCase {
         let contentTextField = app.textFields["contentField"]
         let buttomOk = app.buttons["OK"]
         
-        let email = "email"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:m:s"
+        let now = formatter.string(from: Date())
+        
+        let email = "\(now) email"
         let titulo = "titulo"
         let conteudo = "conteudo"
         
@@ -61,10 +65,11 @@ class GuestBookClientUITests: XCTestCase {
         
         app.alerts["Registro adicionado"].buttons["OK"].tap()
         
-        // obtendo o texto na célula: não descobri como melhorar ainda
-        let cell = app.tables.cells.element(boundBy: 0).staticTexts.element(boundBy: 0)
-        let obtido = cell.label
         let esperado = "\(email), \(titulo), \(conteudo)"
+        
+        let cell = app.tables.cells.staticTexts[esperado]
+        let obtido = cell.label
+        
         print("obtido..........: \(obtido)")
         
         XCTAssert(obtido == esperado)
