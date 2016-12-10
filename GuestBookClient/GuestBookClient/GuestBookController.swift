@@ -25,30 +25,32 @@ class GuestBookController: NSObject {
     // MARK: webservices
     func addEntry(email:String, title:String, content:String, withView view:UIViewController) {
         
-        if dadosValidos(strings: [email, title, content]) {
-            
-            let id = self.guestBooks.count
-            
-            let guestBook = GuestBook(id:id, email: email, title: title, content: content)
-            let parameters: Parameters = guestBook.toDic()
-            print("Os parâmetros são.....\(parameters)")
-            
-            // chamando o webservice
-            Alamofire.request(serviceURL, method:.post, parameters: parameters, encoding: JSONEncoding.default).response { response in
-                
-                let code = (response.response?.statusCode)!
-                
-                if code == HTTPStatusCode.ok.rawValue {
-                    self.guestBooks.append(guestBook)
-                    print("registro adicionado...: \(guestBook.toString())")
-                    
-                    self.alerta(titulo: "Registro adicionado", mensagem: "Registro adicionado com sucesso!", withView:view)
-                } else {
-                    self.alerta(titulo: "Erro adicionando", mensagem: "Houve uma falha tentando adicionar um registro", withView:view)
-                }
-            }
-        } else {
+        if dadosValidos(strings: [email, title, content]) == false {
+
             self.alerta(titulo: "Dados inválidos", mensagem: "Valores não podem ser nulos",withView:view)
+            return
+        }
+        
+        let id = self.guestBooks.count
+        
+        let guestBook = GuestBook(id:id, email: email, title: title, content: content)
+        let parameters: Parameters = guestBook.toDic()
+        print("Os parâmetros são.....\(parameters)")
+        
+        // chamando o webservice
+        Alamofire.request(serviceURL, method:.post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+            
+            let code = (response.response?.statusCode)!
+            
+            if code != HTTPStatusCode.ok.rawValue {
+                self.alerta(titulo: "Erro adicionando", mensagem: "Houve uma falha tentando adicionar um registro", withView:view)
+                return
+            }
+            
+            self.guestBooks.append(guestBook)
+            print("registro adicionado...: \(guestBook.toString())")
+                
+            self.alerta(titulo: "Registro adicionado", mensagem: "Registro adicionado com sucesso!", withView:view)
         }
     }
     
