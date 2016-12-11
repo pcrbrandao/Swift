@@ -39,22 +39,28 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dataCell" id="rih-RX-WeB">
-                                        <rect key="frame" x="0.0" y="92" width="288" height="28"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="28"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rih-RX-WeB" id="4AV-xK-Sax">
-                                            <frame key="frameInset" width="288" height="28"/>
+                                            <frame key="frameInset" width="320" height="27"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-4w-ngu">
+                                <state key="normal" title="Apagar todos!"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="QcC-iI-l0p" secondAttribute="trailing" id="8V8-66-WAe"/>
+                            <constraint firstAttribute="trailing" secondItem="qP5-4w-ngu" secondAttribute="trailing" id="1Qv-UN-FvD"/>
+                            <constraint firstAttribute="trailing" secondItem="QcC-iI-l0p" secondAttribute="trailing" id="8V8-66-WAe"/>
                             <constraint firstItem="QcC-iI-l0p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="Fck-Pw-Wzl"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="QcC-iI-l0p" secondAttribute="leading" id="q9i-gY-IYz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QcC-iI-l0p" secondAttribute="bottom" constant="20" id="tld-Uz-4L2"/>
+                            <constraint firstItem="qP5-4w-ngu" firstAttribute="top" secondItem="QcC-iI-l0p" secondAttribute="bottom" constant="8" id="P7A-iM-Pnu"/>
+                            <constraint firstAttribute="leading" secondItem="qP5-4w-ngu" secondAttribute="leading" id="UjR-TH-m8W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qP5-4w-ngu" secondAttribute="bottom" constant="8" id="Y63-EW-pUt"/>
+                            <constraint firstAttribute="leading" secondItem="QcC-iI-l0p" secondAttribute="leading" id="q9i-gY-IYz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Guest Books" id="qgB-tm-lqT">
