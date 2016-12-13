@@ -12,16 +12,16 @@ class TableViewController: NSObject, UITableViewDataSource, UITableViewDelegate 
     
     let controller = Controller.sharedInstance
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return controller.people.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         // Configure the cell...
-        let person = controller.people[indexPath.row]
-        cell.textLabel!.text = person.valueForKey("name") as? String
+        let person = controller.people[(indexPath as NSIndexPath).row]
+        cell.textLabel!.text = person.value(forKey: "name") as? String
         
         return cell
     }

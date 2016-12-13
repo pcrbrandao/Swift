@@ -10,12 +10,6 @@ import UIKit
 import SpriteKit
 import Foundation
 
-enum PhysicsCategory: UInt32 {
-    case none = 0,
-    player,
-    enemy
-}
-
 class GameController: NSObject {
     
     static let sharedController = GameController()

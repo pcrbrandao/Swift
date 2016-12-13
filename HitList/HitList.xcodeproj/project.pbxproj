@@ -17,7 +17,6 @@
 		000624851D79DDCF00E30002 /* HitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000624841D79DDCF00E30002 /* HitListUITests.swift */; };
 		002D15051D79E78D004961BB /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002D15041D79E78D004961BB /* Controller.swift */; };
 		002D15071D79F99A004961BB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002D15061D79F99A004961BB /* TableViewController.swift */; };
-		007928681DA2C4100044B038 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 007928671DA2C4100044B038 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		000624861D79DDCF00E30002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		002D15041D79E78D004961BB /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		002D15061D79F99A004961BB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		007928671DA2C4100044B038 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +83,6 @@
 		000624551D79DDCE00E30002 = {
 			isa = PBXGroup;
 			children = (
-				007928671DA2C4100044B038 /* .gitignore */,
 				000624601D79DDCE00E30002 /* HitList */,
 				000624781D79DDCF00E30002 /* HitListTests */,
 				000624831D79DDCF00E30002 /* HitListUITests */,
@@ -224,21 +221,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pedro Brandão";
 				TargetAttributes = {
 					0006245D1D79DDCE00E30002 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
 					};
 					000624741D79DDCF00E30002 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0006245D1D79DDCE00E30002;
 					};
 					0006247F1D79DDCF00E30002 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = U3A2WCJ8XS;
+						LastSwiftMigration = 0800;
 						TestTargetID = 0006245D1D79DDCE00E30002;
 					};
 				};
@@ -268,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007928681DA2C4100044B038 /* .gitignore in Resources */,
 				0006246F1D79DDCF00E30002 /* LaunchScreen.storyboard in Resources */,
 				0006246C1D79DDCF00E30002 /* Assets.xcassets in Resources */,
 				000624671D79DDCF00E30002 /* Main.storyboard in Resources */,
@@ -369,8 +368,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -415,8 +416,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -435,6 +438,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -448,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.HitList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -459,6 +464,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.HitList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -470,6 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.HitListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HitList.app/HitList";
 			};
 			name = Debug;
@@ -482,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.HitListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HitList.app/HitList";
 			};
 			name = Release;
@@ -493,6 +501,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.HitListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HitList;
 			};
 			name = Debug;
@@ -504,6 +513,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pcrbrandao.HitListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HitList;
 			};
 			name = Release;

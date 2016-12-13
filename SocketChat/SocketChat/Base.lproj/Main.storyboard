@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocketChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qGy-b8-sJt">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV0-zJ-hbm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtG-RS-bnX">
+                                <state key="normal" title="Join"/>
+                                <connections>
+                                    <action selector="joinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q46-D4-eof"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite seu nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8w-1s-dCf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qGy-b8-sJt" firstAttribute="top" secondItem="a8w-1s-dCf" secondAttribute="bottom" constant="8.5" id="bEu-14-JVV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qGy-b8-sJt" secondAttribute="leading" id="dXR-Am-MeT"/>
+                            <constraint firstItem="qGy-b8-sJt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="epW-nl-Q6R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a8w-1s-dCf" secondAttribute="trailing" id="fHq-Sk-Llh"/>
+                            <constraint firstItem="FtG-RS-bnX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fYs-zm-b4d"/>
+                            <constraint firstItem="FtG-RS-bnX" firstAttribute="top" secondItem="qGy-b8-sJt" secondAttribute="bottom" constant="8" id="gFp-ab-Kkm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qGy-b8-sJt" secondAttribute="trailing" id="k65-IK-PTN"/>
+                            <constraint firstItem="XV0-zJ-hbm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kYc-fM-tUc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="a8w-1s-dCf" secondAttribute="leading" id="vZZ-q2-rpU"/>
+                            <constraint firstItem="XV0-zJ-hbm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yN6-PC-GII"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginField" destination="qGy-b8-sJt" id="nib-8C-DMb"/>
+                        <outlet property="mensagemLabel" destination="a8w-1s-dCf" id="rEC-2h-HwH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+</document>

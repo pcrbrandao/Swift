@@ -11,10 +11,28 @@
 		001CDB7B1D9053BC00BCC5AE /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001CDB7A1D9053BC00BCC5AE /* SpriteComponent.swift */; };
 		0056011C1D902D660075A5FC /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056011B1D902D660075A5FC /* PlayerEntity.swift */; };
 		005AAC331DB150DE00F04F9D /* IdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AAC321DB150DE00F04F9D /* IdleState.swift */; };
+		006384311DCBC56D00363318 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006384301DCBC56D00363318 /* StartMenu.swift */; };
+		006384321DCBC56D00363318 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006384301DCBC56D00363318 /* StartMenu.swift */; };
+		006384341DCBC75300363318 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006384331DCBC75300363318 /* CharacterNode.swift */; };
+		006384351DCBC75300363318 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006384331DCBC75300363318 /* CharacterNode.swift */; };
+		0063843B1DCBCE3B00363318 /* ConstantsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0063843A1DCBCE3B00363318 /* ConstantsEnum.swift */; };
+		0063843C1DCBCE3B00363318 /* ConstantsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0063843A1DCBCE3B00363318 /* ConstantsEnum.swift */; };
+		0063843E1DCBD0DE00363318 /* GameData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0063843D1DCBD0DE00363318 /* GameData.plist */; };
+		0063843F1DCBD0DE00363318 /* GameData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0063843D1DCBD0DE00363318 /* GameData.plist */; };
+		006384451DCBE08900363318 /* back.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384401DCBE08900363318 /* back.atlas */; };
+		006384461DCBE08900363318 /* back.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384401DCBE08900363318 /* back.atlas */; };
+		006384471DCBE08900363318 /* blob.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384411DCBE08900363318 /* blob.atlas */; };
+		006384481DCBE08900363318 /* blob.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384411DCBE08900363318 /* blob.atlas */; };
+		006384491DCBE08900363318 /* front.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384421DCBE08900363318 /* front.atlas */; };
+		0063844A1DCBE08900363318 /* front.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384421DCBE08900363318 /* front.atlas */; };
+		0063844B1DCBE08900363318 /* side.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384431DCBE08900363318 /* side.atlas */; };
+		0063844C1DCBE08900363318 /* side.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384431DCBE08900363318 /* side.atlas */; };
+		0063844D1DCBE08900363318 /* still.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384441DCBE08900363318 /* still.atlas */; };
+		0063844E1DCBE08900363318 /* still.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 006384441DCBE08900363318 /* still.atlas */; };
 		0072612E1DB2AA04002D50F1 /* StateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0072612D1DB2AA04002D50F1 /* StateComponent.swift */; };
 		0073494E1D81D412000E804E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0073494D1D81D412000E804E /* AppDelegate.swift */; };
 		007349501D81D412000E804E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0073494F1D81D412000E804E /* GameScene.sks */; };
-		007349521D81D412000E804E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349511D81D412000E804E /* GameScene.swift */; };
+		007349521D81D412000E804E /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349511D81D412000E804E /* LevelScene.swift */; };
 		007349541D81D412000E804E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007349531D81D412000E804E /* GameViewController.swift */; };
 		007349571D81D412000E804E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007349551D81D412000E804E /* Main.storyboard */; };
 		007349591D81D412000E804E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007349581D81D412000E804E /* Assets.xcassets */; };
@@ -45,11 +63,20 @@
 		001CDB7A1D9053BC00BCC5AE /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		0056011B1D902D660075A5FC /* PlayerEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		005AAC321DB150DE00F04F9D /* IdleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdleState.swift; sourceTree = "<group>"; };
+		006384301DCBC56D00363318 /* StartMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
+		006384331DCBC75300363318 /* CharacterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
+		0063843A1DCBCE3B00363318 /* ConstantsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsEnum.swift; sourceTree = "<group>"; };
+		0063843D1DCBD0DE00363318 /* GameData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameData.plist; sourceTree = "<group>"; };
+		006384401DCBE08900363318 /* back.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = back.atlas; path = Atlas/back.atlas; sourceTree = "<group>"; };
+		006384411DCBE08900363318 /* blob.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = blob.atlas; path = Atlas/blob.atlas; sourceTree = "<group>"; };
+		006384421DCBE08900363318 /* front.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = front.atlas; path = Atlas/front.atlas; sourceTree = "<group>"; };
+		006384431DCBE08900363318 /* side.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = side.atlas; path = Atlas/side.atlas; sourceTree = "<group>"; };
+		006384441DCBE08900363318 /* still.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = still.atlas; path = Atlas/still.atlas; sourceTree = "<group>"; };
 		0072612D1DB2AA04002D50F1 /* StateComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateComponent.swift; sourceTree = "<group>"; };
 		0073494A1D81D412000E804E /* RogueLike-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RogueLike-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0073494D1D81D412000E804E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0073494F1D81D412000E804E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		007349511D81D412000E804E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		007349511D81D412000E804E /* LevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		007349531D81D412000E804E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		007349561D81D412000E804E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		007349581D81D412000E804E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				0073494F1D81D412000E804E /* GameScene.sks */,
-				007349511D81D412000E804E /* GameScene.swift */,
+				007349511D81D412000E804E /* LevelScene.swift */,
+				006384301DCBC56D00363318 /* StartMenu.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -133,8 +161,20 @@
 		005601201D902E8A0075A5FC /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				006384331DCBC75300363318 /* CharacterNode.swift */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		006384361DCBC7C700363318 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0073495D1D81D412000E804E /* Info.plist */,
+				0073494D1D81D412000E804E /* AppDelegate.swift */,
+				0063843A1DCBCE3B00363318 /* ConstantsEnum.swift */,
+				0063843D1DCBD0DE00363318 /* GameData.plist */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 		007349411D81D412000E804E = {
@@ -160,13 +200,14 @@
 		0073494C1D81D412000E804E /* RogueLike-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				006384361DCBC7C700363318 /* Config */,
 				001CDB7C1D905FDE00BCC5AE /* States */,
 				001CDB771D9048FC00BCC5AE /* Controllers */,
 				001CDB761D9048E300BCC5AE /* Scenes */,
 				005601201D902E8A0075A5FC /* Nodes */,
 				0056011D1D902DA10075A5FC /* Components */,
 				0056011A1D902D430075A5FC /* Entities */,
-				007349801D81F28C000E804E /* Support */,
+				007349801D81F28C000E804E /* Resources */,
 				0073497F1D81F259000E804E /* Views */,
 			);
 			path = "RogueLike-Swift";
@@ -200,14 +241,17 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		007349801D81F28C000E804E /* Support */ = {
+		007349801D81F28C000E804E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				006384401DCBE08900363318 /* back.atlas */,
+				006384411DCBE08900363318 /* blob.atlas */,
+				006384421DCBE08900363318 /* front.atlas */,
+				006384431DCBE08900363318 /* side.atlas */,
+				006384441DCBE08900363318 /* still.atlas */,
 				007349581D81D412000E804E /* Assets.xcassets */,
-				0073495D1D81D412000E804E /* Info.plist */,
-				0073494D1D81D412000E804E /* AppDelegate.swift */,
 			);
-			name = Support;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,9 +365,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				007349501D81D412000E804E /* GameScene.sks in Resources */,
+				0063843E1DCBD0DE00363318 /* GameData.plist in Resources */,
+				006384451DCBE08900363318 /* back.atlas in Resources */,
 				0073495C1D81D412000E804E /* LaunchScreen.storyboard in Resources */,
+				0063844D1DCBE08900363318 /* still.atlas in Resources */,
+				0063844B1DCBE08900363318 /* side.atlas in Resources */,
 				007349591D81D412000E804E /* Assets.xcassets in Resources */,
 				007349571D81D412000E804E /* Main.storyboard in Resources */,
+				006384471DCBE08900363318 /* blob.atlas in Resources */,
+				006384491DCBE08900363318 /* front.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +381,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006384461DCBE08900363318 /* back.atlas in Resources */,
+				0063843F1DCBD0DE00363318 /* GameData.plist in Resources */,
+				0063844E1DCBE08900363318 /* still.atlas in Resources */,
+				006384481DCBE08900363318 /* blob.atlas in Resources */,
+				0063844A1DCBE08900363318 /* front.atlas in Resources */,
+				0063844C1DCBE08900363318 /* side.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +406,11 @@
 			files = (
 				001CDB791D90491300BCC5AE /* GameController.swift in Sources */,
 				001CDB7B1D9053BC00BCC5AE /* SpriteComponent.swift in Sources */,
-				007349521D81D412000E804E /* GameScene.swift in Sources */,
+				006384311DCBC56D00363318 /* StartMenu.swift in Sources */,
+				0063843B1DCBCE3B00363318 /* ConstantsEnum.swift in Sources */,
+				007349521D81D412000E804E /* LevelScene.swift in Sources */,
 				0072612E1DB2AA04002D50F1 /* StateComponent.swift in Sources */,
+				006384341DCBC75300363318 /* CharacterNode.swift in Sources */,
 				007349541D81D412000E804E /* GameViewController.swift in Sources */,
 				005AAC331DB150DE00F04F9D /* IdleState.swift in Sources */,
 				0073494E1D81D412000E804E /* AppDelegate.swift in Sources */,
@@ -363,7 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0063843C1DCBCE3B00363318 /* ConstantsEnum.swift in Sources */,
 				007349671D81D412000E804E /* RogueLike_SwiftTests.swift in Sources */,
+				006384351DCBC75300363318 /* CharacterNode.swift in Sources */,
+				006384321DCBC56D00363318 /* StartMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
