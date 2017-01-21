@@ -37,8 +37,5 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         controller.loadPeople()
     }
-    
-    
-    
 }
 
