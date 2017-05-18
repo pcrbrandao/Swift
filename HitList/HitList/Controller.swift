@@ -57,7 +57,7 @@ class Controller: NSObject {
             let managedContext = appDelegate.managedObjectContext
             
             //2
-            // let fetchRequest = NSFetchRequest(entityName: "Person")
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Person")
             
             //3
             do {
