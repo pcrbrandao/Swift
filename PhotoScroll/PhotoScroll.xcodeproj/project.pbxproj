@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00F1D8D91ECE8CEA00269EC5 /* PhotoCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1D8D81ECE8CEA00269EC5 /* PhotoCommentViewController.swift */; };
+		00F1D8DB1ECF640900269EC5 /* ManagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1D8DA1ECF640900269EC5 /* ManagePageViewController.swift */; };
 		481872EB1C00CD06001C3658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481872EA1C00CD06001C3658 /* AppDelegate.swift */; };
 		481872ED1C00CD06001C3658 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481872EC1C00CD06001C3658 /* CollectionViewController.swift */; };
 		481872F01C00CD06001C3658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481872EE1C00CD06001C3658 /* Main.storyboard */; };
@@ -18,9 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00F1D8D81ECE8CEA00269EC5 /* PhotoCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PhotoCommentViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
+		00F1D8DA1ECF640900269EC5 /* ManagePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ManagePageViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		481872E71C00CD06001C3658 /* PhotoScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481872EA1C00CD06001C3658 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		481872EC1C00CD06001C3658 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		481872EC1C00CD06001C3658 /* CollectionViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		481872EF1C00CD06001C3658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		481872F11C00CD06001C3658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481872F41C00CD06001C3658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				48C5E5C61C0269BE007D1345 /* ZoomedPhotoViewController.swift */,
+				00F1D8D81ECE8CEA00269EC5 /* PhotoCommentViewController.swift */,
+				00F1D8DA1ECF640900269EC5 /* ManagePageViewController.swift */,
 			);
 			name = zooming;
 			sourceTree = "<group>";
@@ -171,9 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F1D8D91ECE8CEA00269EC5 /* PhotoCommentViewController.swift in Sources */,
 				481872ED1C00CD06001C3658 /* CollectionViewController.swift in Sources */,
 				48C5E5C71C0269BE007D1345 /* ZoomedPhotoViewController.swift in Sources */,
 				481872FD1C00E747001C3658 /* PhotoCell.swift in Sources */,
+				00F1D8DB1ECF640900269EC5 /* ManagePageViewController.swift in Sources */,
 				481872EB1C00CD06001C3658 /* AppDelegate.swift in Sources */,
 				489D25A31C07787C006283B2 /* UIImage.swift in Sources */,
 			);
