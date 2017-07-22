@@ -49,7 +49,14 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                // let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                
+                let sb = UIStoryboard.init(name: "Main", bundle: nil)
+                let vc = sb.instantiateViewController(withIdentifier: "detalhe2")
+                
+                // let controller = (segue.destination as! UINavigationController).topViewController as! Detalhe2ViewController
+                let controller = vc as! Detalhe2ViewController
+                
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true

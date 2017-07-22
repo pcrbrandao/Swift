@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TipCalculator
+
+  Created by Pedro Brandão on 22/07/17.
+  Copyright © 2017 Pedro Brandão. All rights reserved.
+*/
+
+"Tip Calculator" = "Tip Calculator";
+"Enter Amount" = "Enter Amount";
+"Tip" = "Tip";
+"Total" = "Total";

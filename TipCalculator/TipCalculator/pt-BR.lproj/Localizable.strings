@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TipCalculator
+
+  Created by Pedro Brandão on 22/07/17.
+  Copyright © 2017 Pedro Brandão. All rights reserved.
+*/
+
+"Tip Calculator" = "Calculadora de Groja";
+"Enter Amount" = "Informe o valor";
+"Tip" = "Groja";
+"Total" = "Total";
