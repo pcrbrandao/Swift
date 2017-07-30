@@ -17,16 +17,33 @@ class Calculator: NSObject {
     }
     
     func calculate() {
-        self.calcVC.amountLabel.text?.toCurrency(value: self.calcVC.inputField.text!)
+        let tipPercent = Double(self.calcVC.percentSlider.value)
+        self.calcVC.percentLabel.text = tipPercent.toPercent()
         
-        guard let amount = Double(self.calcVC.inputField.text!) else {
+        let maxLength = 10
+        
+        if var input = self.calcVC.inputField.text?.characters, input.count > maxLength {
+            input.removeLast()
+            print("\nValor excede o permitido...\(String(input))\n")
+            self.calcVC.inputField.text = String(input)
             return
         }
         
-        let tipPercent = Double(self.calcVC.percentSlider.value)
+        guard let amount = Double(self.calcVC.inputField.text!), amount > 0 else {
+            self.calcVC.totalAmountLabel.text = 0.0.toCurrency()
+            self.calcVC.amountLabel.text = NSLocalizedString("Enter Amount", comment: "")
+            self.calcVC.tipAmountLabel.text = 0.0.toCurrency()
+            return
+        }
+        
         let tip = amount / 100.0 * tipPercent
+        let total = (amount / 100.00) + tip
+        
+        self.calcVC.amountLabel.text = (amount / 100.0).toCurrency()
+        
         
         self.calcVC.tipAmountLabel.text = tip.toCurrency()
+        self.calcVC.totalAmountLabel.text = total.toCurrency()
     }
 }
 
@@ -39,15 +56,8 @@ extension Double {
         
         return numberFormatter.string(from: number)!
     }
-}
-
-extension String {
-    mutating func toCurrency(value: String) {
-        guard let amount = Int(value), amount > 0 else {
-            self = NSLocalizedString("Enter Amount", comment: "")
-            return
-        }
-        let amountDouble = Double(amount) / 100.0
-        self = amountDouble.toCurrency()
+    
+    func toPercent() -> String {
+        return String(format: "%.1f%%", self * 100.0)
     }
 }

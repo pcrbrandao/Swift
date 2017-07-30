@@ -45,12 +45,21 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setupAparence() {
-        self.amountLabel.layer.shadowOpacity = 0.7
-        self.amountLabel.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        shadowInLabels(labels: [amountLabel, tipAmountLabel, totalAmountLabel])
+    }
+    
+    func shadowInLabels(labels: [UILabel]) {
+        for label in labels {
+            label.layer.shadowOpacity = 0.7
+            label.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        }
     }
     
     @IBAction func typingAmount(_ sender: UITextField) {
-        
+        self.calculator.calculate()
+    }
+    
+    @IBAction func novoValorSlider(_ sender: UISlider) {
         self.calculator.calculate()
     }
 }

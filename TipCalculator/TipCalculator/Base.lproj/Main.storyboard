@@ -41,8 +41,11 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.14999999999999999" minValue="0.0" maxValue="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="6Dz-5U-ohX" userLabel="percentSlider">
                                 <rect key="frame" x="84" y="129" width="277" height="31"/>
+                                <connections>
+                                    <action selector="novoValorSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="4aL-AE-hLV"/>
+                                </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-K5-4sm" userLabel="percentLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-K5-4sm" userLabel="percentLabel">
                                 <rect key="frame" x="16" y="134" width="62" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="62" id="AL8-F3-ebn"/>
