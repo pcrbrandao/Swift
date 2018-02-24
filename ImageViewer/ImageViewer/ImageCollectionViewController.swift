@@ -23,23 +23,27 @@ final class ImageCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNotificationCenterObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let image = UIImage(named: "foto_perfil")
-        let popup = PopupDialog(title: "PopupDialog", message: "Olá do AppDelegate!", image: image)
-        let button = DefaultButton(title:"Default Button", dismissOnTap: true) {
-            print("\n\nTudo certo!")
-        }
-        popup.addButton(button)
-        self.present(popup, animated: true, completion: nil)
     }
     
     // MARK: Custom
-    // print("Response: \(String(describing: response.response))\n")
-    // print("Result: \(response.result)\n")
-    // print("JSON response: \(String(describing: response.result.value))")
+    private func addNotificationCenterObserver() {
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(showPopup), name: NSNotification.Name(rawValue: NotificationName.PEDIDO_RECEBIDO), object: nil)
+    }
+    
+    @objc private func showPopup(withNotification notification: NSNotification) {
+        let image = UIImage(named:"foto_perfil")
+        let popup = PopupDialog(title: "Mensagem do AppDelegate", message: notification.userInfo?["order_id"] as? String, image: image)
+        let button = DefaultButton(title: "OK", dismissOnTap: true, action: nil)
+        popup.addButton(button)
+        present(popup, animated: true, completion: nil)
+    }
+    
     func loadData() {
         
         let params: Parameters = [

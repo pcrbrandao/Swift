@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum NotificationName {
+    public static let PEDIDO_RECEBIDO = "Pedido Recebido"
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -17,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: AppDelegate
     var window: UIWindow?
 
-
+    func postNotification() {
+        let nc = NotificationCenter.default
+        nc.post(name: NSNotification.Name(rawValue: NotificationName.PEDIDO_RECEBIDO), object: nil, userInfo: ["order_id" : "1234"])
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window?.tintColor = themeColor // added here
@@ -40,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        postNotification()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
