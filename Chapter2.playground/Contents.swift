@@ -103,7 +103,7 @@ example(of: "create") {
         .disposed(by: dispBag)
 }
 
-let deferredEx = (description:"deferred", action: {
+example(of: "deferred") {
     let dispBag = DisposeBag()
     var flip = false
     let factory: Observable<Int> = Observable.deferred {
@@ -121,6 +121,6 @@ let deferredEx = (description:"deferred", action: {
             .disposed(by: dispBag)
         print()
     }
-})
+}
 
 
