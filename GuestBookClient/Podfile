@@ -3,6 +3,6 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'GuestBookClient' do
-    pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'AlamofireObjectMapper', '~> 5.0'
     pod 'HTTPStatusCodes', '~> 3.1.0'
 end
