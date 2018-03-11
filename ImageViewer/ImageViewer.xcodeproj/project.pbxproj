@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00304F1B205547F7001D61BA /* Chapter5.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Chapter5.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		00554B64201E08570001FDB5 /* Chapter3.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Chapter3.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0062864B1FF8083000B3C904 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		0062864D1FF8121200B3C904 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				0085F8EB201D1169003274B0 /* Chapter2.playground */,
 				00554B64201E08570001FDB5 /* Chapter3.playground */,
 				00B6F20A1FF6E2BF0045C204 /* Podfile */,
+				00304F1B205547F7001D61BA /* Chapter5.playground */,
 				00B6F1DB1FF6E2520045C204 /* ImageViewer */,
 				00B6F1F01FF6E2520045C204 /* ImageViewerTests */,
 				00B6F1FB1FF6E2520045C204 /* ImageViewerUITests */,
