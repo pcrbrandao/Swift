@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,8 +44,8 @@
                                 <rect key="frame" x="40" y="386" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.67817674250000004" green="0.88699919869999999" blue="0.54654333939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="EHd-bq-6it"/>
                                     <constraint firstAttribute="height" constant="80" id="V7Z-O6-Ar2"/>
+                                    <constraint firstAttribute="width" secondItem="zp0-a0-4Ju" secondAttribute="height" multiplier="1:1" id="w1x-tn-iLG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Clear"/>
@@ -62,7 +63,7 @@
                                 <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="0fA-c1-O9l"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="mpO-6m-Bpg"/>
+                                    <constraint firstAttribute="width" secondItem="kxB-yd-P8e" secondAttribute="height" multiplier="1:1" id="ZyK-GI-fxp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Save"/>
