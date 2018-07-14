@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import ReSwift
+
+let mainStore = Store<TimeLineState>(
+    reducer: timeLineReducer,
+    state: nil
+)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
