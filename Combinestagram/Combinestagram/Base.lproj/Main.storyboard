@@ -115,6 +115,7 @@
                         <outlet property="buttonSave" destination="kxB-yd-P8e" id="3gx-pC-USd"/>
                         <outlet property="imagePreview" destination="bih-xf-PNW" id="oec-j8-adI"/>
                         <outlet property="itemAdd" destination="XF1-i7-ele" id="Bd9-Uh-GXm"/>
+                        <segue destination="cnn-si-zOT" kind="show" identifier="segueAdd" id="kI6-67-aE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5x-Eu-o3L" userLabel="First Responder" sceneMemberID="firstResponder"/>

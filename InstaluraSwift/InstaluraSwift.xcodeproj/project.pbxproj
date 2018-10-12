@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0030872620FB94B200C1B17C /* TimelineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0030872520FB94B200C1B17C /* TimelineAPI.swift */; };
 		0032C53020E98C0400A25023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032C52F20E98C0400A25023 /* AppDelegate.swift */; };
 		0032C53220E98C0400A25023 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032C53120E98C0400A25023 /* TimeLineViewController.swift */; };
 		0032C53520E98C0400A25023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0032C53320E98C0400A25023 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0030872520FB94B200C1B17C /* TimelineAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineAPI.swift; sourceTree = "<group>"; };
 		0032C52C20E98C0400A25023 /* InstaluraSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaluraSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0032C52F20E98C0400A25023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0032C53120E98C0400A25023 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				0032C53B20E98C0400A25023 /* Info.plist */,
 				00B1FD2020E9AD59002F3860 /* TimeLine.swift */,
 				00F75F2520F430FE00EC88DD /* PostTableViewCell.swift */,
+				0030872520FB94B200C1B17C /* TimelineAPI.swift */,
 			);
 			path = InstaluraSwift;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0030872620FB94B200C1B17C /* TimelineAPI.swift in Sources */,
 				0032C53220E98C0400A25023 /* TimeLineViewController.swift in Sources */,
 				0032C53020E98C0400A25023 /* AppDelegate.swift in Sources */,
 				00B1FD2120E9AD59002F3860 /* TimeLine.swift in Sources */,
